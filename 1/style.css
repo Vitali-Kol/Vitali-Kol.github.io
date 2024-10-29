@@ -33,9 +33,8 @@ h1, h2 {
     font: normal 170% 'Century Gothic', Arial;
     margin: 0 0 15px 0;
     padding: 15px 0 5px 0;
-color: #000;
+    color: #000;
 }
-
 
 h2 {
     font-size: 140%;
@@ -53,34 +52,49 @@ ul {
 
 ul li {
     margin: 0 0 6px 0;
-    padding: 0 0 4px 5px; /* Fixed padding value */
+    padding: 0 0 4px 5px;
     line-height: 1.5em;
 }
 
-.header {
+/* Стили для header */
+header {
     background-color: darkslateblue;
     height: 177px;
     font-size: 0.8em;
-    margin-left: 0;
-    margin-right: 0;
     min-width: 900px;
 }
 
-
-
-.main, .logo, .menubar, .site_content, .footer {
+/* Стили для main */
+main {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Стили для nav */
+nav {
+    width: 900px;
+    height: 46px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Стили для .site_content или section.site_content */
+.site_content, section.site_content {
+    width: 880px;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    background-color: white;
+}
+
+/* Стили для logo */
 .logo {
     width: 880px;
     padding-bottom: 40px;
 }
 
 .logo h1, .logo h2 {
-    font: normal 300% 'Century Gothic', Arial, sans-serif; /* Capitalized font name */
-    margin: 0 0 0 9px; /* Fixed margin value */
+    font: normal 300% 'Century Gothic', Arial, sans-serif;
+    margin: 0 0 0 9px;
 }
 
 .logo_text h1, .logo_text h1 a, .logo_text h1 a:hover {
@@ -88,31 +102,30 @@ ul li {
     color: #fff;
     letter-spacing: 0.1em;
     text-decoration: none;
+    margin-left: 250px
 }
 
 .logo_text h2 {
     font-size: 0.9em;
     padding: 4px 0 0 0;
     color: #999;
-}
-.menubar {
-    width: 900px;
-    height: 46px;
+    margin-left: 500px
 }
 
+/* Стили для меню */
 ul.menu {
     float: right;
 }
 
 ul.menu li {
     float: left;
-    padding: 0 0 0 9px; /* Fixed padding value */
+    padding: 0 0 0 9px;
     list-style: none;
     margin: 1px 2px 0 0;
 }
 
 ul.menu li a {
-    font: normal 100% 'Trebuchet MS', sans-serif; /* Capitalized font name */
+    font: normal 100% 'Trebuchet MS', sans-serif;
     display: block;
     height: 20px;
     padding: 6px 35px 5px 28px;
@@ -123,6 +136,7 @@ ul.menu li a {
 ul.menu li.selected a {
     color: #aeb002;
 }
+
 ul.menu li a:hover {
     color: #e4ec04;
 }
@@ -131,19 +145,13 @@ hr {
     border: solid 1px #f3f3f3;
 }
 
-.site_content {
-    width: 880px;
-    overflow: hidden;
-    margin: 20px auto 0 auto;
-    background-color: white;
-}
-
+/* Стили для sidebar и sidebar_container */
 .sidebar_container {
-    float: right; /* Removed extra semicolon */
+    float: right;
     width: 224px;
 }
 
-.sidebar {
+aside.sidebar, .sidebar {
     float: right;
     width: 222px;
     padding: 5%;
@@ -152,6 +160,7 @@ hr {
     border-radius: 5px;
     background-color: #f9f9f9;
 }
+
 .btn {
     padding: 8px;
     background-color: white;
@@ -162,7 +171,7 @@ hr {
     color: #136cb2;
 }
 
-.lables_passreg_text {
+.labels_passreg_text {
     font-size: 0.7em;
     margin-top: 3%;
     margin-left: 2%;
@@ -174,16 +183,18 @@ hr {
 
 .sidebar ul li {
     list-style-type: none;
-    margin: 0; /* Fixed margin value */
+    margin: 0;
 }
 
-.sidebar .rating_sidebar { /* Added a dot for the class */
+.sidebar .rating_sidebar {
     float: right;
 }
+
+/* Стили для основного контента */
 .content {
     text-align: left;
     width: 620px;
-    padding: 0 0 0 5px; /* Fixed padding value */
+    padding: 0 0 0 5px;
     float: left;
 }
 
@@ -191,6 +202,7 @@ hr {
     text-decoration: none;
 }
 
+/* Стили для блока фильмов */
 .films_block {
     margin-bottom: 5%;
 }
@@ -206,7 +218,6 @@ hr {
 }
 
 /* Страница просмотра фильма */
-
 .info_film_page {
     margin-top: 2%;
     margin-bottom: 4%;
@@ -269,6 +280,7 @@ hr {
     width: 624px;
     height: 200px;
 }
+
 .send input[type="submit"] {
     background-color: #7268AD;
     padding: 3%;
@@ -284,33 +296,20 @@ hr {
     width: 516px;
 }
 
-.info_film {
+/* Стили для информации о фильме */
+.info_film, .info_show {
     margin-bottom: 5%;
     background-color: #f9f9f9;
     padding: 5%;
     height: 270px;
 }
 
-.info_film img {
+.info_film img, .info_show img {
     float: left;
     margin-right: 2%;
     border-radius: 5px;
     border: solid 5px #dad7d5;
     width: 25%;
-}
-.info_show img {
-    float: left;
-    margin-right: 2%;
-    border-radius: 5px;
-    border: solid 5px #dad7d5;
-    width: 25%;
-}
-
-.info_show{
-    margin-bottom: 5%;
-    background-color: #f9f9f9;
-    padding: 5%;
-    height: 270px;
 }
 
 .button {
@@ -337,6 +336,7 @@ td {
     padding: 2%;
     border: solid 1px #f4f4f4;
 }
+
 td img {
     width: 60px;
     vertical-align: middle;
@@ -350,28 +350,27 @@ td img {
     font-weight: bold;
 }
 
-.footer {
+/* Стили для footer */
+footer {
     width: 100%;
     height: 100px;
     padding: 28px 0 5px 0;
     text-align: center;
     background-color: darkslateblue;
     color: #a8aa94;
-    margin-left: 0px;
-    margin-right: 0px;
     min-width: 900px;
 }
 
-.footer a {
+footer a {
     color: #a8aa94;
     text-decoration: none;
 }
 
-.footer a:hover {
+footer a:hover {
     color: #fff;
     text-decoration: none;
 }
 
-.footer p {
+footer p {
     padding: 0 0 10px 0;
 }
