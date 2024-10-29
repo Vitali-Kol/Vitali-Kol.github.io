@@ -56,20 +56,37 @@ ul li {
     line-height: 1.5em;
 }
 
-.header {
+/* Стили для header */
+header {
     background-color: darkslateblue;
     height: 177px;
     font-size: 0.8em;
-    margin-left: 0;
-    margin-right: 0;
     min-width: 900px;
 }
 
-.main, .logo, .menubar, .site_content, .footer {
+/* Стили для main */
+main {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Стили для nav */
+nav {
+    width: 900px;
+    height: 46px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Стили для .site_content или section.site_content */
+.site_content, section.site_content {
+    width: 880px;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    background-color: white;
+}
+
+/* Стили для logo */
 .logo {
     width: 880px;
     padding-bottom: 40px;
@@ -85,14 +102,17 @@ ul li {
     color: #fff;
     letter-spacing: 0.1em;
     text-decoration: none;
+    margin-left: 250px;
 }
 
 .logo_text h2 {
     font-size: 0.9em;
     padding: 4px 0 0 0;
     color: #999;
+    margin-left: 500px;
 }
 
+/* Стили для меню */
 .menubar {
     width: 900px;
     height: 46px;
@@ -130,19 +150,13 @@ hr {
     border: solid 1px #f3f3f3;
 }
 
-.site_content {
-    width: 880px;
-    overflow: hidden;
-    margin: 20px auto 0 auto;
-    background-color: white;
-}
-
+/* Стили для sidebar и sidebar_container */
 .sidebar_container {
     float: right;
     width: 224px;
 }
 
-.sidebar {
+aside.sidebar, .sidebar {
     float: right;
     width: 222px;
     padding: 5%;
@@ -162,7 +176,7 @@ hr {
     color: #136cb2;
 }
 
-.lables_passreg_text {
+.labels_passreg_text {
     font-size: 0.7em;
     margin-top: 3%;
     margin-left: 2%;
@@ -181,6 +195,7 @@ hr {
     float: right;
 }
 
+/* Стили для основного контента */
 .content {
     text-align: left;
     width: 620px;
@@ -192,22 +207,12 @@ hr {
     text-decoration: none;
 }
 
-.games_block {
+/* Стили для блока фильмов */
+.films_block, .games_block, .console_block {
     margin-bottom: 5%;
 }
 
-.games_block img {
-    border-radius: 5px;
-    border: solid 5px #dad7d5;
-    width: 22%;
-    height: 180px;
-}
-
-.console_block {
-    margin-bottom: 5%;
-}
-
-.console_block img {
+.films_block img, .games_block img, .console_block img {
     border-radius: 5px;
     border: solid 5px #dad7d5;
     width: 22%;
@@ -218,28 +223,27 @@ hr {
     font-size: 0.8em;
 }
 
-/* Страница просмотра игры */
-
-.info_game_page {
+/* Страница просмотра фильма или игры */
+.info_film_page, .info_game_page {
     margin-top: 2%;
     margin-bottom: 4%;
 }
 
-.info_game_page label {
+.info_film_page label, .info_game_page label {
     font-size: 1.2em;
 }
 
-.info_game_page .value {
+.info_film_page .value, .info_game_page .value {
     font-size: 1em;
     color: #49945A;
     margin-right: 3%;
 }
 
-.descriptions_game {
+.descriptions_film, .descriptions_game {
     margin-bottom: 15%;
 }
 
-.descriptions_game img {
+.descriptions_film img, .descriptions_game img {
     float: left;
     margin-right: 2%;
     border-radius: 5px;
@@ -298,14 +302,15 @@ hr {
     width: 516px;
 }
 
-.info_game {
+/* Стили для информации о фильме или игре */
+.info_film, .info_show, .info_game {
     margin-bottom: 5%;
     background-color: #f9f9f9;
     padding: 5%;
     height: 270px;
 }
 
-.info_game img {
+.info_film img, .info_show img, .info_game img {
     float: left;
     margin-right: 2%;
     border-radius: 5px;
@@ -317,9 +322,9 @@ hr {
     background-color: #7268ad;
     padding: 2%;
     color: white;
-    border-radius: 25px;
+    border-radius: 5px;
     float: right;
-    margin-top: 1%;
+    margin-top: 5%;
     clear: both;
     font-size: 0.8em;
 }
@@ -339,7 +344,7 @@ td {
 }
 
 td img {
-    width: 95px;
+    width: 60px;
     vertical-align: middle;
 }
 
@@ -351,28 +356,27 @@ td img {
     font-weight: bold;
 }
 
-.footer {
+/* Стили для footer */
+footer {
     width: 100%;
     height: 100px;
     padding: 28px 0 5px 0;
     text-align: center;
     background-color: darkslateblue;
     color: #a8aa94;
-    margin-left: 0px;
-    margin-right: 0px;
     min-width: 900px;
 }
 
-.footer a {
+footer a {
     color: #a8aa94;
     text-decoration: none;
 }
 
-.footer a:hover {
+footer a:hover {
     color: #fff;
     text-decoration: none;
 }
 
-.footer p {
+footer p {
     padding: 0 0 10px 0;
 }
