@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #ffff;
+    background: #27353f;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Задает минимальную высоту */
+    margin: 0;
+    padding: 0;
+    background-image: url('temnii-fon.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    padding: 15px;
+}
+
+.my_projects {
+    display: block;
+    left: 10px;
+}
+
+.my_projects a {
+    color: #ff574c;
+    text-decoration: none;
+}
+
+#mailme {
+    color: aliceblue; 
+}
+
+footer {
+    margin-top: auto; 
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.second-project {
+    margin-top: 35px; 
+}
