@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <meta name="description" content="MovieBase - Your Movie Portal" />
+    <meta name="keywords" content="movies, online movies, hd"/>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .language-switch {
+            margin: 10px;
+            text-align: right;
+        }
+        .language-switch a {
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: darkslateblue;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="main">
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index_en.html">MovieBase</a></h1>
+                    <h2>Movies are our passion!</h2>
+                </div>  
+            </div>
+
+            <nav> 
+                <ul class="menu">
+                    <li class="selected"><a href="index_en.html">Home</a></li>
+                    <li><a href="films_en.html">Movies</a></li> <!-- Добавленная кнопка -->
+                    <li><a href="serials_en.html">Series</a></li>
+                    <li><a href="rating.html">Movie Ratings</a></li>
+                    <li><a href="contact_en.html">Contact</a></li>
+                    <li><a href="index.html">Русский</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site_content">
+
+                <div class="sidebar_container">
+                    <div class="sidebar">
+                        <h2>Search</h2>
+                        <form method="post" action="#" id="search_form">
+                            <input type="search" name="search_field" placeholder="your query"/>
+                            <input type="submit" class="btn" value="find"/>
+                        </form>
+                    </div>
+
+                    <div class="sidebar">
+                        <h2>Login</h2>
+                        <form method="post" action="#" id="login">
+                            <input type="text" name="login_field" placeholder="login"/>
+                            <input type="password" name="password_field" placeholder="password"/>
+                            <input type="submit" class="btn" value="login"/>
+                            <div class="lables_passreg_text">
+                                <span><a href="#">Forgot password?</a></span> | <span><a href="#">Registration</a></span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="sidebar">
+                        <h2>News</h2>
+                        <span>31.02.2018</span>
+                        <p>We launched an advanced search</p>
+                        <a href="#">Read</a>
+                    </div>
+
+                    <div class="sidebar">
+                        <h2>Movie Ratings</h2>
+                        <ul>
+                            <li><a href="show_en.html">Interstellar</a><span class="rating_sidebar">8.1</span></li>
+                            <li><a href="matrix_en.html">The Matrix</a><span class="rating_sidebar">8.0</span></li>
+                            <li><a href="madmax_en.html">Mad Max</a><span class="rating_sidebar">7.5</span></li>
+                            <li><a href="atlas_en.html">Cloud Atlas</a><span class="rating_sidebar">7.4</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content_contact">
+                    <h1>New Movies</h1> 
+                    <div class="films_block">
+                        <a href="matrix_en.html"><img src="allphotos/matrix.png" alt="The Matrix"></a>
+                        <a href="madmax_en.html"><img src="allphotos/max.png" alt="Mad Max"></a>
+                        <a href="show_en.html"><img src="allphotos/inter.png" alt="Interstellar"></a>
+                        <a href="atlas_en.html"><img src="allphotos/cloud.png" alt="Cloud Atlas"></a>
+                    </div>
+
+                    <h1>New Series</h1>
+                    <div class="film_block"> 
+                        <a href="dead_en.html"><img src="allphotos/dead.png" alt="The Walking Dead"></a>
+                        <a href="silicon_en.html"><img src="allphotos/silicon.png" alt="Silicon Valley"></a>
+                        <a href="breakingbad_en.html"><img src="allphotos/breakingbad.png" alt="Breaking Bad"></a>
+                        <a href="xfiles_en.html"><img src="allphotos/xfiles.png" alt="The X-Files"></a>
+                    </div>
+
+                    <div class="posts">
+                        <hr>
+                        <h2><a href="#">How Interstellar Was Filmed</a></h2>
+                        <div class="posts_content">
+                            <p>Christopher Nolan turned 45 - one of the most successful directors of our time.</p>
+                        </div>
+                        <p><a href="#">Read</a></p>
+                        <hr>
+                        <h2><a href="#">Actor Tom Hanks Shared His Impressions of the Festival</a></h2>
+                        <div class="posts_content">
+                            <p>On February 16, the 67th British Academy Film Awards ceremony took place in London.</p>
+                        </div>
+                        <p><a href="#">Read</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>
+                    <a href="index_en.html">Home</a>
+                    <a href="films_en.html">Movies</a>
+                    <a href="serials_en.html">Series</a>
+                    <a href="rating_en.html">Movie ratings</a>
+                    <a href="contact_en.html">Contact</a>
+                </p>
+                <p>kinopoisk.ru</p>
+            </div>
+        </div>
+    </body>
+    </html>

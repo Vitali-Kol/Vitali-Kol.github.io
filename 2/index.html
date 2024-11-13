@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <meta name="description" content="GameBase - это портал об играх" />
+    <meta name="keywords" content="игры, онлайн игры, гейминг, обзоры игр"/>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .language-switch {
+            margin: 10px;
+            text-align: right;
+        }
+        .language-switch a {
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: darkslateblue;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index.html">GameBase</a></h1>
+                    <h2>Игры - наша страсть!</h2>
+                </div>  
+            </div>
+
+           <nav> 
+                <ul class="menu">
+                    <li class="selected"><a href="index.html">Главная</a></li>
+                    <li><a href="games.html">Игры</a></li> <!-- Добавленная кнопка -->
+                    <li><a href="consoles.html">Консоли</a></li>
+                    <li><a href="rating.html">Рейтинг игр</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="index_en.html">English</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site_content">
+
+            <div class="sidebar_container">
+                <div class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="ваш запрос"/>
+                        <input type="submit" class="btn" value="найти"/>
+                    </form>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Вход</h2>
+                    <form method="post" action="#" id="login">
+                        <input type="text" name="login_field" placeholder="логин"/>
+                        <input type="password" name="password_field" placeholder="пароль"/>
+                        <input type="submit" class="btn" value="вход"/>
+                        <div class="lables_passreg_text">
+                            <span><a href="#">Забыли пароль?</a></span> | <span><a href="#">Регистрация</a></span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Новости</h2>
+                    <span>31.02.2024</span>
+                    <p>Запущен новый раздел с обзорами игр.</p>
+                    <a href="#">Читать</a>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Рейтинг игр</h2>
+                    <ul>
+                        <li><a href="game1.html">The Witcher 3</a><span class="rating_sidebar">9.5</span></li>
+                        <li><a href="game2.html">Cyberpunk 2077</a><span class="rating_sidebar">8.9</span></li>
+                        <li><a href="game3.html">God of War Ragnarok</a><span class="rating_sidebar">9.3</span></li>
+                        <li><a href="game4.html">Elden Ring</a><span class="rating_sidebar">9.7</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content_contact">
+                <h1>Новые игры</h1>
+                <div class="games_block">
+                    <a href="game1.html"><img src="allphotos/witcher3.png"></a>
+                    <a href="game2.html"><img src="allphotos/cyberpunk.png"></a>
+                    <a href="game3.html"><img src="allphotos/godofwar.png"></a>
+                    <a href="game4.html"><img src="allphotos/eldenring.png"></a>
+                </div>
+
+                <h1>Консоли</h1>
+                <div class="console_block"> 
+                    <a href="ps5.html"><img src="allphotos/ps5.png"></a>
+                    <a href="xbox.html"><img src="allphotos/xbox.png"></a>
+                    <a href="nintendoswitch.html"><img src="allphotos/nintendoswitch.png"></a>
+                    <a href="steamdeck.html"><img src="allphotos/steamdeck.png"></a>
+                </div>
+
+                <div class="posts">
+                    <hr>
+                    <h2><a href="#">Как создавали Elden Ring</a></h2>
+                    <div class="posts_content">
+                        <p>FromSoftware раскрывает секреты создания одной из самых ожидаемых игр года.</p>
+                    </div>
+                    <p><a href="#">Читать</a></p>
+                    <hr>
+                    <h2><a href="#">Том Хенкс о своих любимых играх</a></h2>
+                    <div class="posts_content">
+                        <p>В интервью на фестивале Том Хенкс рассказал о своих игровых предпочтениях.</p>
+                    </div>
+                    <p><a href="#">Читать</a></p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Главная</a>
+                <a href="games.html">Игры</a>
+                <a href="consoles.html">Консоли</a>
+                <a href="rating.html">Рейтинг игр</a>
+                <a href="contact.html">Контакты</a>
+            </p>
+            <p>gamebase.ru</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игры</title>
+    <meta name="description" content="GameBase - это портал об играх">
+    <meta name="keywords" content="игры, игры онлайн, гейминг, обзоры игр">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .language_switch {
+            margin: 10px;
+            text-align: right;
+        }
+        .language_switch a {
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: darkslateblue;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index.html">GameBase</a></h1>
+                    <h2>Игры - наша страсть!</h2>
+                </div>
+            </div>
+
+           <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="games.html">Игры</a></li>
+                    <li><a href="consoles.html">Консоли</a></li>
+                    <li><a href="rating.html">Рейтинг игр</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="games_en.html">English</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site_content">
+
+            <div class="sidebar_container">
+
+                <div class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search-field" placeholder="ваш запрос" />
+                        <input type="submit" class="btn" value="Найти" />
+                    </form>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Вход</h2>
+                    <form method="post" action="#" id="login">
+
+                        <input type="text" name="Login_field" placeholder="логин"/>
+                        <input type="password" name="password_field" placeholder="пароль"/>
+                        <input type="submit" class="btn" value="Вход" />
+                        <div class="lables_passreg_text">
+                            <span><a href="#">Забыли пароль?</a></span> | <span><a href="#">Регистрация</a></span>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Новости</h2>
+                    <span>31.02.2024</span>
+                    <p>Новый релиз игры с открытым миром поражает графикой!</p>
+                    <a href="#">Читать</a>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Рейтинг игр</h2>
+                    <ul>
+                        <li><a href="game1.html">The Witcher 3</a><span class="rating_sidebar">9.5</span></li>
+                        <li><a href="game2.html">Cyberpunk 2077</a><span class="rating_sidebar">8.9</span></li>
+                        <li><a href="game3.html">God of War Ragnarok</a><span class="rating_sidebar">9.3</span></li>
+                        <li><a href="game4.html">Elden Ring</a><span class="rating_sidebar">9.7</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="content">
+
+                <div class="info_film">
+                    <img src="allphotos/witcher3.png" alt="The Witcher 3">
+                    В легендарной игре "The Witcher 3: Wild Hunt" вы играете за ведьмака Геральта из Ривии и сражаетесь с монстрами, выполняете квесты, исследуете огромный открытый мир.
+                    <div class="button"><a href="game1.html">Играть(Купить)</a></div>
+                </div>
+
+                <div class="info_film">
+                    <img src="allphotos/cyberpunk.png" alt="Cyberpunk 2077">
+                    Действие "Cyberpunk 2077" разворачивается в мрачном будущем, где технологии и корпорации управляют миром. Откройте для себя все тайны Найт-Сити!
+                    <div class="button"><a href="game2.html">Играть(Купить)</a></div>
+                </div>
+
+                <div class="info_film">
+                    <img src="allphotos/godofwar.png" alt="God of War Ragnarok">
+                    Погрузитесь в эпичную историю Кратоса и его сына Атрея в игре "God of War Ragnarok", где вы будете сражаться с богами и мифическими существами.
+                    <div class="button"><a href="game3.html">Играть(Купить)</a></div>
+                </div>
+
+                <div class="info_film">
+                    <img src="allphotos/eldenring.png" alt="Elden Ring">
+                    Исследуйте огромный мир и сразитесь с могущественными боссами в игре "Elden Ring" — проекте от создателей Dark Souls и Джорджа Р. Р. Мартина.
+                    <div class="button"><a href="game4.html">Играть(Купить)</a></div>
+                </div>
+
+            </div>
+         </div>
+         
+        <footer>
+            <p>
+                <a href="index.html">Главная</a>
+                <a href="games.html">Игры</a>
+                <a href="consoles.html">Консоли</a>
+                <a href="rating.html">Рейтинг игр</a>
+                <a href="contact.html">Контакты</a>
+            </p>
+            <p>gamebase.ru</p>
+        </div>
+    </div>
+</body>
+</html>

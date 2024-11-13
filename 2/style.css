@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.15em;
+    background-color: #fff;
+    color: #555;
+}
+
+p {
+    padding: 0 0 20px 0;
+    line-height: 1.7em;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="search"] {
+    color: #5d5d5d;
+    width: 60%;
+    padding: 8px;
+}
+
+input, 
+textarea {
+    outline: none;
+    border: none;
+    border: solid 1px #f2f2f2;
+}
+
+h1, h2 {
+    font: normal 170% 'Century Gothic', Arial;
+    margin: 0 0 15px 0;
+    padding: 15px 0 5px 0;
+    color: #000;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+a, a:hover {
+    outline: none;
+    text-decoration: underline;
+    color: #aeb002;
+}
+
+ul {
+    margin: 2px 0 22px 17px;
+}
+
+ul li {
+    margin: 0 0 6px 0;
+    padding: 0 0 4px 5px;
+    line-height: 1.5em;
+}
+
+/* Header Styles */
+header {
+    background-color: darkslateblue;
+    height: 177px;
+    font-size: 0.8em;
+    min-width: 900px;
+}
+
+/* Main Styles */
+main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Nav Styles */
+nav {
+    width: 900px;
+    height: 46px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .site_content or section.site_content Styles */
+.site_content, section.site_content {
+    width: 1175px;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    background-color: white;
+}
+
+/* Logo Styles */
+.logo {
+    width: 880px;
+    padding-bottom: 40px;
+}
+
+.logo h1, .logo h2 {
+    font: normal 300% 'Century Gothic', Arial, sans-serif;
+    margin: 0 0 0 9px;
+}
+
+.logo_text h1, .logo_text h1 a, .logo_text h1 a:hover {
+    padding: 22px 0 0 0;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    margin-left: 250px;
+}
+
+.logo_text h2 {
+    font-size: 0.9em;
+    padding: 4px 0 0 0;
+    color: #999;
+    margin-left: 500px;
+}
+
+/* Menu Styles */
+ul.menu {
+    float: right;
+}
+
+ul.menu li {
+    float: left;
+    padding: 0 0 0 9px;
+    list-style: none;
+    margin: 1px 2px 0 0;
+}
+
+ul.menu li a {
+    font: normal 100% 'Trebuchet MS', sans-serif;
+    display: block;
+    height: 20px;
+    padding: 6px 35px 5px 28px;
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.menu li.selected a {
+    color: #aeb002;
+}
+
+ul.menu li a:hover {
+    color: #e4ec04;
+}
+
+hr {
+    border: solid 1px #f3f3f3;
+}
+
+/* Sidebar Styles */
+.sidebar_container {
+    float: right;
+    width: 224px;
+}
+
+aside.sidebar, .sidebar {
+    float: right;
+    width: 222px;
+    padding: 5%;
+    margin: 0 0 16px 0;
+    border: solid 1px #f2f2f2;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.btn {
+    padding: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.sidebar h2 {
+    color: #136cb2;
+}
+
+.labels_passreg_text {
+    font-size: 0.7em;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.sidebar ul {
+    margin: 0;
+}
+
+.sidebar ul li {
+    list-style-type: none;
+    margin: 0;
+}
+
+.sidebar .rating_sidebar {
+    float: right;
+}
+
+/* Content Styles */
+.content {
+    text-align: left;
+    width: 620px;
+    padding: 0 0 0 5px;
+    float: left;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+.films_block {
+    display: grid;
+    grid-template-columns: 400px 400px; /* Две колонки */
+    gap: 10px; /* Расстояние между изображениями */
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto; /* Центрируем блок */
+}
+
+.film_block {
+    display: grid;
+    grid-template-columns: 400px 400px; /* Две колонки */
+    gap: 10px; /* Расстояние между изображениями */
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto; /* Центрируем блок */
+}
+
+/* Film Description */
+.film_description {
+    flex: 1;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.film_description h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.film_description p {
+    margin-bottom: 15px;
+}
+
+.film_description a {
+    background-color: #7268AD;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.film_description a:hover {
+    background-color: #5a4a92;
+}
+
+/* Center Align the Films Block */
+.films_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+/* Aligning Descriptions and Other Content */
+.descriptions_game, .descriptions_film {
+    width: 100%; /* Take up full width */
+    text-align: center; /* Center text */
+    margin-bottom: 20px;
+}
+
+.descriptions_game img, .descriptions_film img {
+    float: none;
+    width: 50%; /* Ensure images don't overwhelm layout */
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+}
+
+/* Adjusting Info Layout */
+.info_game, .info_show {
+    background-color: #f9f9f9;
+    padding: 5%;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px; /* Limit width for better readability */
+}
+
+.info_game img, .info_show img {
+    width: 50%; /* Set image width for consistency */
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Posts Content */
+.posts.posts_content {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding: 3%;
+}
+
+/* Film Page */
+.info_film_page, .info_game_page {
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.info_film_page label, .info_game_page label {
+    font-size: 1.2em;
+}
+
+.info_film_page .value, .info_game_page .value {
+    font-size: 1em;
+    color: #49945A;
+    margin-right: 3%;
+}
+
+.games_block img, .console_block img {
+    width: 250px; /* Fixed height for uniformity */
+    height: 250px;
+    border-radius: 5px;
+}
+
+/* Description Film */
+.descriptions_film, .descriptions_game {
+    margin-bottom: 15%;
+    width: 90%;
+    text-align: left;
+    margin-left: 2%;
+}
+
+.descriptions_film img, .descriptions_game img {
+    float: none;
+    width: 73%;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+}
+
+/* Reviews */
+.reviews {
+    margin-bottom: 4%;
+    font-size: 0.9em;
+    text-align: left;
+    width: 96%;
+}
+
+.reviews .review_name {
+    background-color: #7268AD;
+    color: white;
+    padding: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.reviews .review_text {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+}
+
+/* Send Form */
+.send {
+    margin-bottom: 4%;
+}
+
+.send input[type="text"], textarea {
+    border: solid 1px #C3C3C3;
+    margin-bottom: 2%;
+    width: 50%;
+    font-size: 1.2em;
+}
+
+.send textarea {
+    height: 200px;
+}
+
+.send input[type="submit"] {
+    background-color: #7268AD;
+    padding: 3%;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.22em;
+    display: block;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+/* Info Film */
+.info_film, .info_show {
+    margin-bottom: 5%;
+    background-color: #f9f9f9;
+    padding: 5%;
+    height: 300px;
+}
+
+.info_film img, .info_show img {
+    width: 25%; /* Изображение на всю ширину блока */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 5px;
+}
+
+.button {
+    font-size: 1em; /* Размер текста на кнопке */
+    background-color: #7268ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #5a4a92; /* Цвет кнопки при наведении */
+}
+
+.button {
+    background-color: #7268ad;
+    padding: 2%;
+    color: white;
+    border-radius: 5px;
+    float: right;
+    margin-top: 5%;
+    clear: both;
+    font-size: 0.8em;
+}
+
+.button a {
+    color: white;
+}
+
+/* Table Styles */
+table {
+    width: 75%;
+    font-size: 1.2em;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+table td img {
+    width: 120px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 100px;
+    padding: 28px 0 5px 0;
+    text-align: center;
+    background-color: darkslateblue;
+    color: #a8aa94;
+    min-width: 900px;
+}
+
+footer a {
+    color: #a8aa94;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* CSS Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    header {
+        background-color: #257965;
+        width: 100%;
+        padding: 10%;
+        text-align: center;
+        font-size: 1.0em;
+    }
+
+    .logo h1 {
+        font: normal 235% 'Century Gothic', Arial, sans-serif;
+        transform: translate(-33%, -50%); /* Центрирует текст по горизонтали и вертикали */
+    }
+
+    .logo h2 {
+        font: normal 100% 'Century Gothic', Arial, sans-serif;
+        color: white;
+        transform: translate(-51%, -50%); /* Центрирует текст по горизонтали и вертикали */
+        height: 50px
+    }
+
+    main {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .games_block, .console_block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns that expand or shrink with container */
+        gap: 10px; /* Space between images */
+        max-width: 100%; /* Allow the grid to take up the full container width */
+        padding: 10px;
+        margin: 0 auto; /* Center the block */
+    }
+    
+    .games_block img, .console_block img {
+        width: 435px; /* Fixed height for uniformity */
+        height: 600px;
+        border-radius: 5px;
+    }
+
+
+    nav {
+        width: 100%;
+        height: 100%;
+    }
+
+    aside, .sidebar {
+        display: none;
+    }
+
+
+    ul.menu {
+        float: none;
+        position: relative;
+        top: -80px;
+    }
+
+    ul.menu li {
+        margin: 0;
+        padding: 0;
+        float: none;
+    }
+
+    .info_console, .info_film {
+        margin-bottom: 5%;
+        background-color: #f9f9f9;
+        padding: 5%;
+        width: 130%; /* Ширина блока */
+        height: auto; /* Автоматическая высота для адаптивности */
+        margin-left: 200px; /* Сдвиг правее */
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .info_console img, .info_film img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    iframe {
+        width: 88%;
+        height: 100%;
+    }
+
+    .content_contact {
+        text-align: left;
+        width: 100%; /* Set width to 100% to use the full available space */
+        max-width: 800px; /* Set a maximum width to keep content readable */
+        padding: 0 0 0 5px;
+        margin: 0 auto; /* Center the container */
+        font-size: 2.2em;
+    }
+
+    footer {
+        display: none;
+    }
+}

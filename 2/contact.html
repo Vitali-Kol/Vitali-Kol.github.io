@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <meta name="description" content="GameBase - портал об играх">
+    <meta name="keywords" content="игры, гейминг, контакт">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .language-switch {
+            margin: 10px;
+            text-align: right;
+        }
+        .language-switch a {
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: darkslateblue;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index.html">GameBase</a></h1>
+                    <h2>Игры - наша страсть!</h2>
+                </div>
+            </div>
+
+           <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="games.html">Игры</a></li>
+                    <li><a href="consoles.html">Консоли</a></li>
+                    <li><a href="rating.html">Рейтинг игр</a></li>
+                    <li class="selected"><a href="contact.html">Контакты</a></li>
+                    <li><a href="contact_en.html">English</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site_content">
+
+            <div class="sidebar_container">
+
+                <div class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search-field" placeholder="ваш запрос" />
+                        <input type="submit" class="btn" value="Найти" />
+                    </form>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Вход</h2>
+                    <form method="post" action="#" id="login">
+                        <input type="text" name="login_field" placeholder="логин"/>
+                        <input type="password" name="password_field" placeholder="Пароль"/>
+                        <input type="submit" class="btn" value="Вход" />
+                        <div class="labels_passreg_text">
+                            <span><a href="#">Забыли пароль?</a></span> | <span><a href="#">Регистрация</a></span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Новости</h2>
+                    <span>31.02.2024</span>
+                    <p>Новый релиз игры захватывает индустрию!</p>
+                    <a href="#">Читать</a>
+                </div>
+
+                <div class="sidebar">
+                    <h2>Рейтинг игр</h2>
+                    <ul>
+                        <li><a href="witcher.html">The Witcher 3</a><span class="rating_sidebar">9.5</span></li>
+                        <li><a href="cyberpunk.html">Cyberpunk 2077</a><span class="rating_sidebar">8.9</span></li>
+                        <li><a href="godofwar.html">God of War Ragnarok</a><span class="rating_sidebar">9.3</span></li>
+                        <li><a href="eldenring.html">Elden Ring</a><span class="rating_sidebar">9.7</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="content_contact">
+
+                <h1>Контакты</h1>
+                <p>Отправьте ваш отзыв о портале GameBase</p>
+
+                <div class="send send_contact">
+                    <form method="post" action="#" id="contact">
+                        <input type="text" name="review_name" placeholder="Ваше имя">
+                        <input type="text" name="review_email" placeholder="Ваш email">
+                        <textarea name="review_text" placeholder="Ваш отзыв"></textarea>
+                        <input class="btn" type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Главная</a>
+                <a href="games.html">Игры</a>
+                <a href="consoles.html">Консоли</a>
+                <a href="rating.html">Рейтинг игр</a>
+                <a href="contact.html">Контакты</a>
+            </p>
+            <p>gamebase.ru</p>
+        </div>
+    </div>
+</body>
+</html>
