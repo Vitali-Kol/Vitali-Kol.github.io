@@ -1,56 +1,102 @@
+/* Общие стили */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
+/* Стиль для HTML и Body */
+html, body {
     font-family: 'Roboto', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    color: #ffff;
+    font-size: 16px; /* Уменьшено для лучшей адаптивности */
+    color: #ffffff;
     background: #27353f;
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Задает минимальную высоту */
+    height: 100%; /* Важный элемент для Flexbox */
     margin: 0;
     padding: 0;
-    background-image: url('temnii-fon.jpg'); 
+    display: flex; /* Flexbox для фиксации футера */
+    flex-direction: column; /* Устанавливаем вертикальное направление */
+    background-image: url('temnii-fon.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+/* Header стили */
 header {
-    padding: 15px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(39, 53, 63, 0.8); /* Прозрачный фон для читаемости */
+    font-size: 2em;
+    color: #ff574c;
 }
 
-.my_projects {
-    display: block;
-    left: 10px;
+/* Основной раздел */
+main {
+    padding: 20px;
+    flex: 1; /* Этот элемент занимает оставшееся пространство */
 }
 
-.my_projects a {
+/* Карточки проектов */
+.card {
+    background-color: rgba(39, 53, 63, 0.9);
+    border: 1px solid #ff574c;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #ff574c;
+}
+
+.card-text {
+    color: #ffffff;
+}
+
+.card a.btn-primary {
+    background-color: #ff574c;
+    border-color: #ff574c;
+}
+
+.card a.btn-primary:hover {
+    background-color: #ff776c;
+    border-color: #ff776c;
+}
+
+/* Footer стили */
+footer {
+    background-color: #343a40; /* Соответствует bg-dark */
+    color: #ffffff; /* Соответствует text-white */
+    text-align: center; /* Соответствует text-center */
+    padding: 1rem; /* Соответствует py-3 */
+    margin-top: auto; /* Позволяет футеру быть внизу, когда контента недостаточно */
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Легкая тень для акцента */
+}
+
+/* Ссылки в футере */
+footer a {
     color: #ff574c;
     text-decoration: none;
 }
 
-#mailme {
-    color: aliceblue; 
+footer a:hover {
+    color: #ff776c;
+    text-decoration: underline;
 }
 
-footer {
-    margin-top: auto; 
-    color: aliceblue;
-    padding: 20px;
-    text-align: center;
-    font-size: 0.8em;
-}
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+    }
 
-.second-project {
-    margin-top: 35px; 
+    footer {
+        font-size: 0.8em;
+    }
 }
