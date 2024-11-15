@@ -1,28 +1,78 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Minu portfell!</title>
+    <!-- Meta tags for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        Olen algaja, kuid andekas veebiarendaja!
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Olen algaja, kuid andekas veebiarendaja!</h1>
     </header>
-        Minu tööd
-        <div class="my_projects">
-            <div class="project">
-                <a href="1/index.html">Veebisait puhta HTML/CSS-iga</a>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h2 class="text-center mb-4">Minu tööd</h2>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projekt 1</h5>
+                        <p class="card-text">Veebisait puhta HTML/CSS-iga (Kinobaza)</p>
+                        <a href="1/index.html" class="btn btn-primary">Vaata projekti</a>
+                    </div>
+                </div>
             </div>
-            <div class="project second-project">
-                <a href="2/index.html">Teine veebisait puhta HTML/CSS-iga</a>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projekt 2</h5>
+                        <p class="card-text">Teine veebisait puhta HTML/CSS-iga (GameBase)</p>
+                        <a href="2/index.html" class="btn btn-primary">Vaata projekti</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projekt 3</h5>
+                        <p class="card-text">Kolmas veebisait puhta HTML/CSS-iga (KinoBaza Bootstrap)</p>
+                        <a href="3/index.html" class="btn btn-primary">Vaata projekti</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projekt 4</h5>
+                        <p class="card-text">Neljas veebisait puhta HTML/CSS-iga (PhoneBase Bootstrap)</p>
+                        <a href="4/index.html" class="btn btn-primary">Vaata projekti</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </main>
 
-    <footer>
-        Olen koostööks valmis!
-        <a id="mailme" href="mailto:vitali.kolesnikov@ivkhk.ee">Kirjuta mulle</a>
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Olen koostööks valmis!</p>
+        <a id="mailme" href="mailto:vitali.kolesnikov@ivkhk.ee" class="btn btn-outline-light">Kirjuta mulle</a>
     </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
