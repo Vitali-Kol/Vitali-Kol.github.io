@@ -16,7 +16,7 @@ html, body {
     padding: 0;
     display: flex; /* Flexbox для фиксации футера */
     flex-direction: column; /* Устанавливаем вертикальное направление */
-    background-image: url('temnii-fon.jpg');
+    background-image: url('smooth_fon.jpg'); /* Картинка для ПК */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ html, body {
 header {
     padding: 20px;
     text-align: center;
-    background-color: rgba(39, 53, 63, 0.8); /* Прозрачный фон для читаемости */
+    background-color: rgba(50, 53, 63, 0.6); /* Прозрачный фон для читаемости */
     font-size: 2em;
     color: #ff574c;
 }
@@ -68,21 +68,25 @@ main {
     border-color: #ff776c;
 }
 
-/* Footer стили */
+/* Footer */
 footer {
-    background-color: #343a40; /* Соответствует bg-dark */
-    color: #ffffff; /* Соответствует text-white */
-    text-align: center; /* Соответствует text-center */
-    padding: 1rem; /* Соответствует py-3 */
-    margin-top: auto; /* Позволяет футеру быть внизу, когда контента недостаточно */
-    font-size: 0.9em;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Легкая тень для акцента */
+    background: transparent !important; /* Убираем серый цвет полностью */
+    color: #ffffff; /* Белый цвет текста */
+    text-align: center;
+    padding: 1.5rem; /* Увеличиваем отступы */
+    font-size: 1.1em; /* Увеличиваем размер текста */
+    margin-top: auto;
+    position: relative; /* Изменено с absolute */
+    bottom: auto; /* Убираем фиксированное положение */
+    width: 100%;
+    z-index: 10;
 }
 
 /* Ссылки в футере */
 footer a {
     color: #ff574c;
     text-decoration: none;
+    font-size: 1.2em; /* Увеличиваем размер ссылки */
 }
 
 footer a:hover {
@@ -92,11 +96,66 @@ footer a:hover {
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    header {
-        font-size: 1.5em;
+    html, body {
+        background-image: none; /* Убираем фон на мобильной версии */
+        background-color: #27353f; /* Устанавливаем однотонный цвет вместо картинки */
     }
 
     footer {
-        font-size: 0.8em;
+        font-size: 1.2em; /* Еще больше увеличиваем текст на мобильных */
+        padding: 1.5rem; /* Сохраняем отступы для гармоничности */
+        background: transparent !important; /* Полностью убираем серый цвет */
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        font-size: 14px; /* Уменьшение базового размера шрифта на очень маленьких экранах */
+        background-image: none; /* Убираем фон на очень маленьких экранах */
+        background-color: #27353f; /* Цвет фона для мобильных устройств */
+    }
+
+    header {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 1em;
+        padding: 0.5rem;
+        background: transparent !important; /* Прозрачность аналогична десктопной версии */
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .card a.btn-primary {
+        padding: 6px 12px;
+    }
+}
+
+/* Карточки проектов */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%; /* Карточки занимают всю ширину на мобильных */
+        padding: 10px;
+        margin-bottom: 20px; /* Добавляем отступ снизу между карточками */
+    }
+
+    .card-title {
+        font-size: 1.3em;
+    }
+
+    .card-text {
+        margin-bottom: 10px;
+    }
+
+    .card a.btn-primary {
+        padding: 8px 16px;
     }
 }
