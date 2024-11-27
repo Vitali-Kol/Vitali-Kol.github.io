@@ -93,8 +93,8 @@ html, body {
 }
 
 .film_label {
-    padding: 2%;
-    margin-bottom: 4%;
+    padding: 5%;
+    margin-bottom: 35%;
 }
 
 .margin-8 {
@@ -170,4 +170,24 @@ footer a {
 
 footer a:hover {
     color: #efefef;
+}
+
+@media (max-width: 768px) {
+    .films_block img {
+        width: 150px; /* Все фильмы одного размера на узком экране */
+        height: 175px;
+    }
+
+    .films_block img:nth-child(1),
+    .films_block img:nth-child(2) {
+        width: 280px; /* Первые два фильма всегда остаются большими */
+        height: 460px;
+        transform: scale(1.12); /* Slightly enlarges the image on hover */
+
+        
+    }
+    .films_block img:hover {
+        transform: scale(1.15); /* Увеличивает изображение на 10% */
+        z-index: 1; /* Поднимает изображение выше других элементов */
+    }
 }
