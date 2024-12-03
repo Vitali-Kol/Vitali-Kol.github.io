@@ -95,6 +95,7 @@ html, body {
 .film_label {
     padding: 5%;
     margin-bottom: 35%;
+    margin-top: 5%;
 }
 
 .margin-8 {
@@ -180,8 +181,8 @@ footer a:hover {
 
     .films_block img:nth-child(1),
     .films_block img:nth-child(2) {
-        width: 280px; /* Первые два фильма всегда остаются большими */
-        height: 460px;
+        width: 150px; /* Первые два фильма всегда остаются большими */
+        height: 350px;
         transform: scale(1.12); /* Slightly enlarges the image on hover */
 
         
