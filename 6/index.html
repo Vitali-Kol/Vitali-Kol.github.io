@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTA 5 Landing Page</title>
+  <!-- Подключаем Google Font "Bangers" -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <!-- Подключаем внешний файл стилей -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Шапка сайта (Header) -->
+  <header class="header">
+    <div class="header__logo">
+      <img src="gta5logo.png" alt="Логотип GTA 5" />
+      <span class="header__tagline">Grand Theft Auto V</span>
+    </div>
+    <nav class="header__nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="basket.html">Корзина</a>
+    </nav>
+
+    <style>
+      .header__nav a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s;
+
+      }
+      .header__nav {
+        display: flex;
+        gap: 15px;
+      }
+    </style>
+    <div class="header__actions">
+      <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+      <label for="theme-toggle" class="theme-toggle-label">Переключить тему</label>
+    </div>
+    <button class="header__login-btn">Войти</button>
+  </header>
+
+  <!-- Основной блок (Hero) -->
+  <main>
+    <section class="hero">
+      <img src="gtav123.jpg" alt="Hero Image" class="hero__image" />
+    </section>
+
+    <!-- Видео или трейлер -->
+    <section class="video">
+      <div class="video__container">
+        <video controls poster="gta5preview.jpg">
+          <source src="GTAV-trailer.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+    </section>
+
+    <!-- Карусель -->
+    <section class="carousel">
+      <h2>Галерея</h2>
+      <div class="carousel__container">
+        <div class="carousel__slide active">
+          <img src="gta5-screenshot1.jpg" alt="Изображение 1" />
+        </div>
+        <div class="carousel__slide">
+          <img src="gta5-screenshot2.jpg" alt="Изображение 2" />
+        </div>
+        <div class="carousel__slide">
+          <img src="gta5-screenshot3.jpg" alt="Изображение 3" />
+        </div>
+        <div class="carousel__slide">
+          <img src="gta5-screenshot4.jpg" alt="Изображение 4" />
+        </div>
+        <div class="carousel__slide">
+          <img src="gta5-screenshot5.jpg" alt="Изображение 5" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="benefits">
+      <h2>Преимущества</h2>
+    
+      <!-- Радиокнопки (по количеству слайдов) -->
+      <input type="radio" name="benefit" id="b-1" checked>
+      <input type="radio" name="benefit" id="b-2">
+      <input type="radio" name="benefit" id="b-3">
+    
+      <!-- Внешний контейнер для слайдера и стрелок -->
+      <div class="benefits__slider-container">
+        <!-- Контейнер со слайдами -->
+        <div class="benefits__slider">
+          <!-- Слайд 1 -->
+          <div class="benefits__item">
+            <h3>Огромный открытый мир</h3>
+            <p>Игрокам доступен масштабный и детализированный мир Лос-Сантоса и его окрестностей, который можно исследовать пешком, на транспорте, в воздухе или даже под водой. Этот мир наполнен жизнью, активностями и сюрпризами.</p>
+          </div>
+          <!-- Слайд 2 -->
+          <div class="benefits__item">
+            <h3>Уникальный сюжет с тремя героями</h3>
+            <p>Впервые в серии GTA игрок может переключаться между тремя персонажами: Майклом, Франклином и Тревором. У каждого из них своя история, характер и уникальные способности, что делает прохождение сюжета захватывающим.</p>
+          </div>
+          <!-- Слайд 3 -->
+          <div class="benefits__item">
+            <h3>Многопользовательский режим (GTA Online)</h3>
+            <p>GTA Online предоставляет бесконечные возможности для игры с друзьями: совместные ограбления, гонки, создание собственного бизнеса, PvP-сражения и даже тематические события.</p>
+          </div>
+        </div>
+    
+        <!-- Кнопки (стрелки), как у testimonials -->
+        <!-- Для слайда 1 (b-1) -->
+        <label for="b-3" class="benefits__button benefits__button--prev btn-b1">&lt;</label>
+        <label for="b-2" class="benefits__button benefits__button--next btn-b1">&gt;</label>
+    
+        <!-- Для слайда 2 (b-2) -->
+        <label for="b-1" class="benefits__button benefits__button--prev btn-b2">&lt;</label>
+        <label for="b-3" class="benefits__button benefits__button--next btn-b2">&gt;</label>
+    
+        <!-- Для слайда 3 (b-3) -->
+        <label for="b-2" class="benefits__button benefits__button--prev btn-b3">&lt;</label>
+        <label for="b-1" class="benefits__button benefits__button--next btn-b3">&gt;</label>
+      </div>
+    </section>
+
+    <!-- Карточки товаров/услуг -->
+    <section class="cards">
+      <h2>Наши предложения</h2>
+      <div class="cards__container">
+        <!-- Карточка 1 -->
+        <div class="card">
+          <div class="card__image">
+            <img src="bullshark.jpg" alt="Товар 1" />
+          </div>
+          <h3 class="card__title">Bullshark GTA 5</h3>
+          <p class="card__description">Донатная валюта для GTA Online.</p>
+        </div>
+        <!-- Карточка 2 -->
+        <div class="card">
+          <div class="card__image">
+            <img src="paragon.jpg" alt="Товар 2" />
+          </div>
+          <h3 class="card__title">Paragon S</h3>
+          <p class="card__description">Уникальная машина, которая добавилась с новым обновлением!</p>
+        </div>
+        <!-- Карточка 3 -->
+        <div class="card">
+          <div class="card__image">
+            <img src="ps4gta5.jpg" alt="Товар 3" />
+          </div>
+          <h3 class="card__title">PS4 + GTA5</h3>
+          <p class="card__description">Покупаете PS4 и в подарок получаете GTA5!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы (слайдер на чистом CSS) -->
+    <section class="testimonials">
+      <h2>Отзывы</h2>
+      
+      <!-- Радиокнопки (по количеству слайдов) -->
+      <input type="radio" name="testimonial" id="t-1" checked>
+      <input type="radio" name="testimonial" id="t-2">
+      <input type="radio" name="testimonial" id="t-3">
+    
+      <!-- Внешний контейнер для слайдера и стрелок -->
+      <div class="testimonials__slider-container">
+        <!-- Контейнер со слайдами -->
+        <div class="testimonials__slider">
+          <!-- Слайд 1 -->
+          <div class="testimonials__item">
+            <img src="shrek.jpg" alt="Avatar 1" />
+            <p>«Игра потрясающая, провёл в ней уже сотни часов!»</p>
+          </div>
+          <!-- Слайд 2 -->
+          <div class="testimonials__item">
+            <img src="shrek2.jpg" alt="Avatar 2" />
+            <p>«Самый захватывающий сюжет и отличная графика!»</p>
+          </div>
+          <!-- Слайд 3 -->
+          <div class="testimonials__item">
+            <img src="shrek3.jpg" alt="Avatar 3" />
+            <p>«Наконец-то появилось, что действительно удивляет!»</p>
+          </div>
+        </div>
+    
+        <!-- Кнопки навигации -->
+        <label for="t-3" class="testimonials__button testimonials__button--prev btn-1">&lt;</label>
+        <label for="t-2" class="testimonials__button testimonials__button--next btn-1">&gt;</label>
+        
+        <label for="t-1" class="testimonials__button testimonials__button--prev btn-2">&lt;</label>
+        <label for="t-3" class="testimonials__button testimonials__button--next btn-2">&gt;</label>
+        
+        <label for="t-2" class="testimonials__button testimonials__button--prev btn-3">&lt;</label>
+        <label for="t-1" class="testimonials__button testimonials__button--next btn-3">&gt;</label>
+      </div>
+    </section>
+
+    <!-- Блок подписки (Sign up) -->
+    <section class="signup">
+      <h2>Присоединяйтесь и начните играть!</h2>
+      <form class="signup__form">
+        <input type="email" placeholder="Ваш Email" required />
+        <!-- Кнопка с id="openModalBtn" -->
+        <button type="button" id="openModalBtn">Зарегистрироваться</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Модальное окно регистрации -->
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <h2>Введите данные</h2>
+      <form id="modalForm" class="modal__form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+        <div class="modal__actions">
+          <button type="submit">Отправить</button>
+          <button type="button" id="closeModal">Закрыть</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Подвал (Footer) -->
+  <footer class="footer">
+    <nav class="footer__menu">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="basket.html">Корзина</a>
+    </nav>
+    <div class="footer__social">
+      <a href="#" target="_blank">
+        <img src="vk-icon.png" alt="VK" class="footer__icon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="instagram-icon.png" alt="Instagram" class="footer__icon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="youtube-icon.png" alt="YouTube" class="footer__icon">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Подключение внешнего JavaScript-файла -->
+  <script src="script.js"></script>
+</body>
+</html>
