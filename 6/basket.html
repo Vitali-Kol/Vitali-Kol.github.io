@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Корзина покупателя – GTA 5 Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="basket.css" />
+</head>
+<body>
+  <!-- Шапка сайта (Header) -->
+  <header class="header">
+    <div class="header__logo">
+      <img src="gta5logo.png" alt="Логотип GTA 5" />
+      <span class="header__tagline">Grand Theft Auto V</span>
+    </div>
+    <nav class="header__nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="basket.html">Корзина</a>
+    </nav>
+    <div class="header__actions">
+      <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+      <label for="theme-toggle" class="theme-toggle-label">Переключить тему</label>
+    </div>
+    <button class="header__login-btn">Войти</button>
+  </header>
+
+  <!-- Основной контент страницы -->
+  <main>
+    <section class="basket">
+      <h1>Ваша корзина</h1>
+      <p>Выбранные товары и услуги:</p>
+      <div class="basket__items">
+        <!-- Карточка товара 1 -->
+        <article class="basket__item">
+          <img src="bullshark.jpg" alt="Bullshark GTA 5" />
+          <div class="basket__item-info">
+            <h2>Bullshark GTA 5</h2>
+            <p>Донатная валюта для GTA Online.</p>
+            <p class="basket__item-price">Цена: 1000 долларов.</p>
+          </div>
+        </article>
+        <!-- Карточка товара 2 -->
+        <article class="basket__item">
+          <img src="paragon.jpg" alt="Paragon S" />
+          <div class="basket__item-info">
+            <h2>Paragon S</h2>
+            <p>Уникальная машина из последнего обновления.</p>
+            <p class="basket__item-price">Цена: 2500 долларов.</p>
+          </div>
+        </article>
+        <!-- Новая карточка товара 3 -->
+        <article class="basket__item">
+          <img src="kravtiragtav.jpg" alt="Роскошная квартира в Vinewood" />
+          <div class="basket__item-info">
+            <h2>Роскошная квартира</h2>
+            <p>Элитная недвижимость в Vinewood для вашего персонажа.</p>
+            <p class="basket__item-price">Цена: 5000 долларов.</p>
+          </div>
+        </article>
+        <!-- Новая карточка товара 4 -->
+        <article class="basket__item">
+          <img src="karabin.jpg" alt="Специальное оружие" />
+          <div class="basket__item-info">
+            <h2>Оружие</h2>
+            <p>Уникальное оружие для спецзаданий GTA Online.</p>
+            <p class="basket__item-price">Цена: 3000 долларов.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="basket__summary">
+        <h3>Общая сумма: <span>11500 долларов.</span></h3>
+        <button class="basket__checkout-btn">Оформить заказ</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал (Footer) -->
+  <footer class="footer">
+    <nav class="footer__menu">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="basket.html">Корзина</a>
+    </nav>
+    <div class="footer__social">
+      <a href="#" target="_blank">
+        <img src="vk-icon.png" alt="VK" class="footer__icon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="instagram-icon.png" alt="Instagram" class="footer__icon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="youtube-icon.png" alt="YouTube" class="footer__icon">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Подключение JS для переключения темы -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggleCheckbox = document.getElementById('theme-toggle');
+      const body = document.body;
+      
+      // Если сохранённый режим темы в localStorage есть, применяем его
+      const savedTheme = localStorage.getItem('theme');
+      if(savedTheme === 'light') {
+        body.classList.add('light-theme');
+        themeToggleCheckbox.checked = true;
+      }
+      
+      themeToggleCheckbox.addEventListener('change', () => {
+        if (themeToggleCheckbox.checked) {
+          body.classList.add('light-theme');
+          localStorage.setItem('theme', 'light');
+        } else {
+          body.classList.remove('light-theme');
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

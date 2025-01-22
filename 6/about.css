@@ -1,0 +1,453 @@
+/* ================================
+   СБРОС СТИЛЕЙ
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ================================
+     БАЗОВЫЕ СТИЛИ (ТЁМНАЯ ТЕМА)
+  ================================ */
+  body {
+    background: #111;
+    color: #ccc;
+    font-family: 'Bangers', cursive;
+    line-height: 1.4;
+  }
+  
+  /* ================================
+     HEADER (Шапка сайта)
+  ================================ */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .header__logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__logo img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+  }
+  
+  .header__tagline {
+    font-size: 1.3rem;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+  }
+  
+  .header__nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s;
+  }
+  
+  .header__nav a:hover {
+    color: #f39c12;
+  }
+  
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .theme-toggle-checkbox {
+    display: none;
+  }
+  
+  .theme-toggle-label {
+    background: linear-gradient(145deg, #ffa500, #2980b9);
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .theme-toggle-label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header__login-btn {
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .header__login-btn:hover {
+    background-color: #d9890f;
+  }
+  
+  /* ================================
+     ABOUT (Основной контент страницы "О компании")
+  ================================ */
+  .about {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .about h1 {
+    font-size: 2.5rem;
+    color: #f39c12;
+    margin-bottom: 15px;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* -------- Видео о компании -------- */
+  .about__video {
+    margin-bottom: 30px;
+  }
+  
+  .about__video h2 {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-bottom: 15px;
+  }
+  
+  .video__container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .video__container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    border: none;
+    height: 100%;
+  }
+  
+  /* -------- Галерея (Карусель) -------- */
+  .about__gallery {
+    margin-bottom: 30px;
+  }
+  
+  .about__gallery h2 {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-bottom: 15px;
+  }
+  
+  .carousel__container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .carousel__slide {
+    display: none;
+  }
+  
+  .carousel__slide.active {
+    display: block;
+  }
+  
+  .carousel__slide img {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+  }
+  
+  /* -------- Эффекты и интерактивность (Достижения) -------- */
+  .about__effects {
+    margin-bottom: 30px;
+  }
+  
+  .about__effects h2 {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-bottom: 15px;
+  }
+  
+  .effects__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .effect {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .effect h3 {
+    color: #f39c12;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .effect p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* ================================
+     FOOTER (Подвал сайта)
+  ================================ */
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    color: #ccc;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .footer__menu,
+  .footer__social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer__menu a,
+  .footer__social a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer__menu a:hover,
+  .footer__social a:hover {
+    color: #f39c12;
+  }
+  
+  .footer__social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer__social a img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ================================
+     СТИЛИ ДЛЯ БЕЛОЙ ТЕМЫ (.light-theme)
+     Для применения нужно добавить класс .light-theme к <body>
+  ================================ */
+  .light-theme {
+    background: #fff;
+    color: #333;
+  }
+  
+  .light-theme .header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .light-theme .header__tagline {
+    color: #222;
+    text-shadow: none;
+  }
+  
+  .light-theme .header__login-btn {
+    background-color: #ffa500;
+  }
+  
+  .light-theme .about h1 {
+    color: #ffa500;
+  }
+  
+  .light-theme .about__video h2,
+  .light-theme .about__gallery h2,
+  .light-theme .about__effects h2 {
+    color: #ffa500;
+  }
+  
+  .light-theme .video__container {
+    border: 2px solid #ccc;
+  }
+  
+  .light-theme .effect {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .light-theme .footer {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .light-theme .footer__menu a,
+  .light-theme .footer__social a {
+    color: #333;
+  }
+  
+  .light-theme .footer__menu a:hover,
+  .light-theme .footer__social a:hover {
+    color: #ffa500;
+  }
+  
+  /* ================================
+     АДАПТИВНЫЕ СТИЛИ (Мобильные устройства)
+  ================================ */
+  
+  /* Для экранов до 768px */
+  @media (max-width: 768px) {
+    /* Уменьшаем отступы и размеры заголовков */
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .header__logo img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 5px;
+    }
+
+    .header__login-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .header__tagline {
+      font-size: 1.1rem;
+    }
+    .header__nav a {
+      margin-right: 10px;
+    }
+    
+    .about h1 {
+      font-size: 2rem;
+    }
+    .about p {
+      font-size: 1rem;
+    }
+    
+    .about__video h2,
+    .about__gallery h2,
+    .about__effects h2 {
+      font-size: 1.8rem;
+    }
+    
+    /* Уменьшаем высоту изображений в карусели */
+    .carousel__slide img {
+      height: 300px;
+    }
+    
+    /* В эффектах переключаем на одну колонку */
+    .effects__items {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    /* Уменьшаем отступы в подвале */
+    .footer {
+      text-align: center;
+      gap: 10px;
+    }
+  }
+  
+  /* Для экранов до 480px */
+  @media (max-width: 480px) {
+    .header {
+      padding: 10px;
+    }
+    
+    .header__logo img {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .header__tagline {
+      font-size: 1rem;
+    }
+    
+    .header__nav a {
+      font-size: 0.85rem;
+      margin-right: 8px;
+    }
+    
+    .about {
+      padding: 15px;
+    }
+    
+    .about h1 {
+      font-size: 1.8rem;
+    }
+    
+    .about p {
+      font-size: 0.95rem;
+    }
+    
+    .about__video h2,
+    .about__gallery h2,
+    .about__effects h2 {
+      font-size: 1.6rem;
+    }
+    
+    .video__container {
+      /* При узком экране можно уменьшить соотношение сторон, если нужно */
+      aspect-ratio: 16 / 9;
+    }
+    
+    .carousel__slide img {
+      height: 200px;
+    }
+    
+    .effect {
+      padding: 10px;
+    }
+    
+    .effect h3 {
+      font-size: 1.3rem;
+    }
+    
+    .effect p {
+      font-size: 0.9rem;
+    }
+    
+    .footer {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
