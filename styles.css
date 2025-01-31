@@ -14,7 +14,6 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-image: url('smooth_fon.jpg'); /* Фон для десктопа */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
