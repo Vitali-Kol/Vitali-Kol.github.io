@@ -8,15 +8,13 @@
 /* Стиль для HTML и Body */
 html, body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; /* Уменьшено для лучшей адаптивности */
+    font-size: 16px; /* Базовый размер шрифта */
     color: #ffffff;
     background: #27353f;
-    height: 100%; /* Важный элемент для Flexbox */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Flexbox для фиксации футера */
-    flex-direction: column; /* Устанавливаем вертикальное направление */
-    background-image: url('smooth_fon.jpg'); /* Картинка для ПК */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('smooth_fon.jpg'); /* Фон для десктопа */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,41 +24,47 @@ html, body {
 header {
     padding: 20px;
     text-align: center;
-    background-color: rgba(50, 53, 63, 0.6); /* Прозрачный фон для читаемости */
+    background-color: rgba(50, 53, 63, 0.8); /* Увеличена непрозрачность для лучшей читаемости */
     font-size: 2em;
     color: #ff574c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавлена тень для глубины */
 }
 
 /* Основной раздел */
 main {
     padding: 20px;
-    flex: 1; /* Этот элемент занимает оставшееся пространство */
+    flex: 1;
 }
 
 /* Карточки проектов */
 .card {
-    background-color: rgba(39, 53, 63, 0.9);
+    background-color: rgba(39, 53, 63, 0.95); /* Увеличена непрозрачность для лучшей читаемости */
     border: 1px solid #ff574c;
     border-radius: 10px;
     color: #ffffff;
-    transition: transform 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Добавлен переход для теней */
+    overflow: hidden; /* Обрезка содержимого при увеличении */
 }
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Добавлена тень при наведении */
 }
 
 .card-title {
     color: #ff574c;
+    font-weight: bold; /* Сделать заголовок более выделяющимся */
 }
 
 .card-text {
     color: #ffffff;
+    margin-bottom: 15px; /* Добавлен отступ снизу для текста */
 }
 
 .card a.btn-primary {
     background-color: #ff574c;
     border-color: #ff574c;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .card a.btn-primary:hover {
@@ -68,25 +72,33 @@ main {
     border-color: #ff776c;
 }
 
+/* Ифреймы */
+iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 450px;
+    border-radius: 8px; /* Добавлены скругления углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавлена тень для глубины */
+    margin-bottom: 30px; /* Отступ снизу для разделения */
+}
+
 /* Footer */
 footer {
-    background: transparent !important; /* Убираем серый цвет полностью */
-    color: #ffffff; /* Белый цвет текста */
+    background: rgba(39, 53, 63, 0.8); /* Полупрозрачный фон для контраста */
+    color: #ffffff;
     text-align: center;
-    padding: 1.5rem; /* Увеличиваем отступы */
-    font-size: 1.1em; /* Увеличиваем размер текста */
+    padding: 1.5rem;
+    font-size: 1.1em;
     margin-top: auto;
-    position: relative; /* Изменено с absolute */
-    bottom: auto; /* Убираем фиксированное положение */
     width: 100%;
     z-index: 10;
 }
 
-/* Ссылки в футере */
 footer a {
     color: #ff574c;
     text-decoration: none;
-    font-size: 1.2em; /* Увеличиваем размер ссылки */
+    font-size: 1.2em;
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
 footer a:hover {
@@ -97,54 +109,28 @@ footer a:hover {
 /* Адаптивность */
 @media (max-width: 768px) {
     html, body {
-        background-image: none; /* Убираем фон на мобильной версии */
-        background-color: #27353f; /* Устанавливаем однотонный цвет вместо картинки */
-    }
-
-    footer {
-        font-size: 1.2em; /* Еще больше увеличиваем текст на мобильных */
-        padding: 1.5rem; /* Сохраняем отступы для гармоничности */
-        background: transparent !important; /* Полностью убираем серый цвет */
-    }
-}
-
-@media (max-width: 480px) {
-    html, body {
-        font-size: 14px; /* Уменьшение базового размера шрифта на очень маленьких экранах */
-        background-image: none; /* Убираем фон на очень маленьких экранах */
-        background-color: #27353f; /* Цвет фона для мобильных устройств */
+        background-image: none;
+        background-color: #27353f;
     }
 
     header {
-        font-size: 1.2em;
-        padding: 10px;
+        font-size: 1.8em; /* Немного уменьшен размер шрифта на планшетах */
+        padding: 15px;
     }
 
     main {
-        padding: 10px;
+        padding: 15px;
     }
 
     footer {
-        font-size: 1em;
-        padding: 0.5rem;
-        background: transparent !important; /* Прозрачность аналогична десктопной версии */
-    }
-
-    .card-title {
         font-size: 1.2em;
+        padding: 1.5rem;
     }
 
-    .card a.btn-primary {
-        padding: 6px 12px;
-    }
-}
-
-/* Карточки проектов */
-@media (max-width: 768px) {
     .card {
-        max-width: 100%; /* Карточки занимают всю ширину на мобильных */
-        padding: 10px;
-        margin-bottom: 20px; /* Добавляем отступ снизу между карточками */
+        max-width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
     }
 
     .card-title {
@@ -156,6 +142,63 @@ footer a:hover {
     }
 
     .card a.btn-primary {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        font-size: 14px;
+        background-image: none;
+        background-color: #27353f;
+    }
+
+    header {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .card a.btn-primary {
         padding: 8px 16px;
     }
+
+    iframe {
+        height: 300px; /* Уменьшена высота ифреймов на очень маленьких экранах */
+        margin-bottom: 20px;
+    }
+}
+
+/* Дополнительные улучшения */
+
+/* Ссылки внутри карточек */
+.card a {
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: none;
+}
+
+/* Стилизация кнопок в футере */
+#mailme {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Опционально: Добавить плавную прокрутку */
+html {
+    scroll-behavior: smooth;
 }
