@@ -10,23 +10,26 @@ html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px; /* Базовый размер шрифта */
     color: #ffffff;
-    background: #27353f;
-    height: 100%;
+    background: linear-gradient(135deg, #27353f, #1a2a33);
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    scroll-behavior: smooth; /* Плавная прокрутка */
 }
 
 /* Header стили */
 header {
     padding: 20px;
     text-align: center;
-    background-color: rgba(50, 53, 63, 0.8); /* Увеличена непрозрачность для лучшей читаемости */
-    font-size: 2em;
+    background-color: rgba(50, 53, 63, 0.9);
+    font-size: 2.2em;
     color: #ff574c;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавлена тень для глубины */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 100;
 }
 
 /* Основной раздел */
@@ -35,34 +38,51 @@ main {
     flex: 1;
 }
 
+
 /* Карточки проектов */
 .card {
-    background-color: rgba(39, 53, 63, 0.95); /* Увеличена непрозрачность для лучшей читаемости */
+    background-color: rgba(39, 53, 63, 0.95);
     border: 1px solid #ff574c;
     border-radius: 10px;
     color: #ffffff;
-    transition: transform 0.3s, box-shadow 0.3s; /* Добавлен переход для теней */
-    overflow: hidden; /* Обрезка содержимого при увеличении */
+    overflow: hidden;
+    margin: 20px 0;
+    /* Для анимации появления */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Добавлена тень при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .card-title {
     color: #ff574c;
-    font-weight: bold; /* Сделать заголовок более выделяющимся */
+    font-weight: bold;
+    margin: 15px;
 }
 
 .card-text {
     color: #ffffff;
-    margin-bottom: 15px; /* Добавлен отступ снизу для текста */
+    margin: 15px;
+    margin-bottom: 15px;
 }
 
 .card a.btn-primary {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
     background-color: #ff574c;
-    border-color: #ff574c;
+    border: 2px solid #ff574c;
+    color: #ffffff;
+    border-radius: 5px;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -76,14 +96,14 @@ iframe {
     border: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 450px;
-    border-radius: 8px; /* Добавлены скругления углов */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавлена тень для глубины */
-    margin-bottom: 30px; /* Отступ снизу для разделения */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
 }
 
 /* Footer */
 footer {
-    background: rgba(39, 53, 63, 0.8); /* Полупрозрачный фон для контраста */
+    background: rgba(39, 53, 63, 0.9);
     color: #ffffff;
     text-align: center;
     padding: 1.5rem;
@@ -113,7 +133,7 @@ footer a:hover {
     }
 
     header {
-        font-size: 1.8em; /* Немного уменьшен размер шрифта на планшетах */
+        font-size: 1.8em;
         padding: 15px;
     }
 
@@ -175,7 +195,7 @@ footer a:hover {
     }
 
     iframe {
-        height: 300px; /* Уменьшена высота ифреймов на очень маленьких экранах */
+        height: 300px;
         margin-bottom: 20px;
     }
 }
@@ -195,9 +215,4 @@ footer a:hover {
 #mailme {
     display: inline-block;
     margin-top: 10px;
-}
-
-/* Опционально: Добавить плавную прокрутку */
-html {
-    scroll-behavior: smooth;
 }
