@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Autokool</title>
+  <!-- Подключаем шрифт Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Подключаем внешний файл стилей (тот же style.css) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Первый блок (Hero) -->
+  <div class="hero">
+    <!-- Кнопка переключения на английский (ведёт на index.html) -->
+    <a href="index.html" class="lang-btn">English</a>
+
+    <!-- Центрированный контент -->
+    <div class="hero-content">
+      <h1 class="hero-title">Õpi sõitma enesekindlalt –<br>saada meie juures juhiluba!</h1>
+      <p class="hero-subtitle">Professionaalne sõiduõpe koos edu garantiiga</p>
+      
+      <a href="#" class="btn-primary">Registreeru kursustele</a>
+      
+      <!-- Блок "Learn more" прямо под кнопкой -->
+      <div class="learn-more">
+        <a href="#features">Loe lähemalt autokooli kohta</a>
+        <img src="icons/arrow_down.png" alt="Nool alla" class="arrow-down">
+      </div>
+    </div>
+  </div>
+
+  <!-- Teine blokk (Põhjalikkus/ikoonid) -->
+  <section class="features" id="features">
+    <h2 class="features-title">
+      Pakume kvaliteetset koolitust kõigile, kes soovivad saada enesekindlaks juhiks.<br>
+      Meie autokoolis:
+    </h2>
+
+    <!-- 2×2 võrk nelja kaardiga -->
+    <div class="features-grid">
+      <div class="feature-item">
+        <img src="icons/experiences.png" alt="Funktsioon 1" class="feature-icon">
+        <p class="feature-text">Oleme koolitanud igat kategooriat juhte juba üle 10 aasta.</p>
+      </div>
+      <div class="feature-item">
+        <img src="icons/line-chart.png" alt="Funktsioon 2" class="feature-icon">
+        <p class="feature-text">Valime tundideks sobivad ajad, sealhulgas õhtu- ja nädalavahetuse kursused.</p>
+      </div>
+      <div class="feature-item">
+        <img src="icons/vehicle.png" alt="Funktsioon 3" class="feature-icon">
+        <p class="feature-text">Pakume õppeprotsessi kaasaegsetel, mugavatel ja kergetel sõidukitel.</p>
+      </div>
+      <div class="feature-item">
+        <img src="icons/price-tag.png" alt="Funktsioon 4" class="feature-icon">
+        <p class="feature-text">Püüame teha kvaliteetse hariduse kättesaadavaks kõigile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kolmas blokk (Meie kursused) -->
+  <section class="courses">
+    <h2 class="courses-title">Meie kursused</h2>
+    <div class="courses-grid">
+      <!-- D-kategooria -->
+      <div class="course-item">
+        <img src="icons/bus.png" alt="D-kategooria" class="course-icon">
+        <div class="course-info">
+          <h3>D-kategooria</h3>
+          <p>Kursuse kestus: 3–4 kuud<br>
+             Maksumus: 1000 $<br>
+             Sisaldab:<br>
+             35 tundi teooriat<br>
+             50 tundi praktilist õpet<br>
+             Koolitus erineva mahutavusega bussidel<br>
+             Eksami ettevalmistus
+          </p>
+        </div>
+      </div>
+      <!-- C-kategooria -->
+      <div class="course-item">
+        <img src="icons/truck.png" alt="C-kategooria" class="course-icon">
+        <div class="course-info">
+          <h3>C-kategooria</h3>
+          <p>Kursuse kestus: 3 kuud<br>
+             Maksumus: 800 $<br>
+             Sisaldab:<br>
+             40 tundi teooriat<br>
+             40 tundi praktikat<br>
+             Eriõpe suurte sõidukite juhtimisel<br>
+             Eksami ettevalmistus
+          </p>
+        </div>
+      </div>
+      <!-- A-kategooria -->
+      <div class="course-item">
+        <img src="icons/motorcycle.png" alt="A-kategooria" class="course-icon">
+        <div class="course-info">
+          <h3>A-kategooria</h3>
+          <p>Kursuse kestus: 1,5 kuud<br>
+             Maksumus: 450 $<br>
+             Sisaldab:<br>
+             15 tundi teooriat<br>
+             25 tundi praktikat<br>
+             Mootorrattaõpe<br>
+             Eksami ettevalmistus
+          </p>
+        </div>
+      </div>
+      <!-- B-kategooria -->
+      <div class="course-item">
+        <img src="icons/car.png" alt="B-kategooria" class="course-icon">
+        <div class="course-info">
+          <h3>B-kategooria</h3>
+          <p>Kursuse kestus: 2 kuud<br>
+             Maksumus: 850 $<br>
+             Sisaldab:<br>
+             30 tundi teooriat<br>
+             30 tundi praktilist õpet<br>
+             Ettevalmistus liikluspolitsei eksamiks<br>
+             Individuaaltunnid kiireks omandamiseks
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Neljas blokk (Tagasiside) -->
+  <section class="feedback">
+    <h2 class="feedback-title">Meie õpilaste tagasiside</h2>
+    <p class="feedback-subtitle">Meie lõpetajad jagavad muljeid</p>
+    <div class="feedback-grid">
+      <!-- Esimene arvustus -->
+      <div class="feedback-item">
+        <img src="icons/profile_man.png" alt="Igor" class="feedback-avatar">
+        <h3 class="feedback-name">Igor, 30-aastane</h3>
+        <p class="feedback-text">
+          "Ma kahtlesin alati, kas suudan sõitma õppida, kuid autokool aitas mul endasse uskuda. 
+          Tunnid olid väga kasulikud ja instruktorid tõelised professionaalid."
+        </p>
+      </div>
+      <!-- Teine arvustus -->
+      <div class="feedback-item">
+        <img src="icons/profile_woman.png" alt="Anna" class="feedback-avatar">
+        <h3 class="feedback-name">Anna, 23-aastane</h3>
+        <p class="feedback-text">
+          "Õpe oli suurepärane! Instruktor toetas alati ja andis kasulikke nõuandeid. 
+          Tore, et kõik oli professionaalne ja pingevaba. 
+          Sain eksami esimese korraga tehtud!"
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Viies blokk (Kontaktid) -->
+  <section class="contacts">
+    <h2 class="contacts-title">Meie kontaktid</h2>
+    <div class="contacts-content">
+      <img src="img/car_standing.jpg" alt="Autokooli auto" class="contacts-car">
+
+      <div class="contacts-info">
+        <p><strong>Aadress:</strong> Vabaduse tn 3, 20303 Narva</p> 
+        <img src="icons/map.png" alt="google_map" class="contacts-icons">
+        <p><strong>Telefon:</strong> +372 5814 9871</p> 
+        <img src="icons/phone-call.png" alt="telephone" class="contacts-icons">
+        <p><strong>E-post:</strong> driveschool@gmail.com</p> 
+        <img src="icons/email.png" alt="email" class="contacts-icons">
+      </div> 
+    </div>
+  </section>
+
+  <!-- Jalus (Footer) -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">Privaatsuspoliitika</a> | 
+      <a href="#">Kasutustingimused</a>
+    </div>
+    <div class="social-media">
+      <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+      <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+      <img src="icons/telegram.png" alt="telegram" class="social-icon">
+      <img src="icons/youtube.png" alt="youtube" class="social-icon">
+    </div>
+    <div class="footer-copy">
+      © 2025 [Narva Autom] - Kõik õigused kaitstud
+    </div>
+  </footer>
+</body>
+</html>
