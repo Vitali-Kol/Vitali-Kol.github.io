@@ -61,7 +61,7 @@ html, body {
 
 .hero-title {
   font-weight: 700;
-  font-size: 55px;
+  font-size: 50px;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -132,7 +132,7 @@ html, body {
 .features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2×2 */
-  column-gap: 17.5rem; /* расстояние по горизонтали */
+  column-gap: 6rem; /* расстояние по горизонтали */
   row-gap: 2rem;    /* расстояние по вертикали */
   max-width: 1250px;
   margin: 0 auto;
@@ -169,7 +169,6 @@ html, body {
 .courses-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2×2 */
-  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -180,7 +179,7 @@ html, body {
   text-align: left;
 }
 .course-icon {
-  width: 85px;
+  width: 100px;
   height: auto;
   margin-top: 5px;
 }
