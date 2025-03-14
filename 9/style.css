@@ -1,0 +1,780 @@
+/* === СБРОС БАЗОВЫХ СТИЛЕЙ === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* ========================================
+   1. HERO
+======================================== */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url("images/classic_massage.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.lang-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    background-color: #f6e3a9;
+    color: #333;
+    font-size: 35px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: inline-block;
+}
+
+.hero-title {
+    font-size: 75px;
+    font-weight: 500; /* Medium */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 45px;
+    font-weight: 300; /* Light */
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #f6e3a9;
+    color: #333;
+    font-size: 55px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e7d393;
+}
+
+/* --- Адаптивность HERO --- */
+@media (max-width: 992px) {
+    .lang-btn {
+      font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+      font-size: 50px;
+    }
+    .hero-subtitle {
+      font-size: 30px;
+    }
+    .btn-primary {
+      font-size: 40px;
+      padding: 10px 20px;
+    }
+    .lang-btn {
+      font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+      font-size: 35px;
+    }
+    .hero-subtitle {
+      font-size: 22px;
+    }
+    .btn-primary {
+      font-size: 30px;
+      padding: 8px 15px;
+    }
+    .lang-btn {
+      font-size: 20px;
+    }
+}
+
+/* ========================================
+   2. OUR SERVICES
+======================================== */
+.services {
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+    url("images/beige.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 60px 0; /* Отступы сверху и снизу */
+    text-align: center;
+}
+
+.services-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-title {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Чтобы карточки центрировались */
+    gap: 65px; /* Расстояние между карточками */
+}
+
+.service-card {
+    background-color: #F3E1B1; /* Цвет фона карточки */
+    border-radius: 10px;
+    width: 250px; /* Ширина карточки */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.service-img-wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%; /* Соотношение сторон */
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.service-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    width: 135px; /* Размер картинки */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.service-name {
+    font-size: 28px;
+    font-weight: 650;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-desc {
+    font-size: 27.5px; 
+    color: #444;
+    font-weight: 425;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.service-price {
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Тёмная кнопка для карточки */
+.btn-dark {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+}
+
+/* --- Адаптивность OUR SERVICES --- */
+@media (max-width: 992px) {
+    .service-card {
+      width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-title {
+      font-size: 45px;
+    }
+    .cards-row {
+      gap: 20px;
+    }
+    .service-card {
+      width: 200px;
+      margin: 0 auto;
+    }
+    .service-img {
+      width: 130px; 
+    }
+    .service-name {
+      font-size: 24px;
+    }
+    .service-desc {
+      font-size: 22px;
+    }
+    .service-price {
+      font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-title {
+      font-size: 35px;
+    }
+    /* Сетка 2 на 2 для карточек */
+    .services .cards-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .service-img {
+      width: 120px;
+    }
+    .service-name {
+      font-size: 20px;
+    }
+    .service-desc {
+      font-size: 18px;
+    }
+    .service-price {
+      font-size: 18px;
+    }
+}
+
+/* ========================================
+   3. BENEFITS OF MASSAGE
+======================================== */
+.benefits {
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+     url("images/f5c30811-caf8-45a0-9ccf-8b083bce9f2b.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.benefits-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefits-title {
+    font-size: 60px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.benefits-subtitle {
+    font-size: 40px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.benefits-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+}
+
+.benefit-icon {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 15px;
+}
+
+.benefit-text {
+    font-size: 40px;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+}
+
+/* --- Адаптивность BENEFITS --- */
+@media (max-width: 768px) {
+    .benefits-title {
+      font-size: 45px;
+    }
+    .benefits-subtitle {
+      font-size: 30px;
+    }
+    .benefit-text {
+      font-size: 28px;
+    }
+    .benefit-icon {
+      width: 90px;
+      height: 90px;
+    }
+    .benefits-row {
+      gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits-title {
+      font-size: 35px;
+    }
+    .benefits-subtitle {
+      font-size: 24px;
+    }
+    .benefit-text {
+      font-size: 24px;
+    }
+    .benefit-icon {
+      width: 60px;
+      height: 60px;
+    }
+}
+
+/* ========================================
+   4. HOW TO BOOK A MASSAGE
+======================================== */
+.booking {
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+     url("images/hand_painted_neutral_coloured_watercolour_background_1906.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 60px 0; 
+    text-align: center;
+}
+
+.booking-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.booking-title {
+    font-size: 60px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.booking-subtitle {
+    font-size: 40px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Список шагов */
+.booking-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px; 
+}
+
+.step-text {
+    font-size: 30px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* --- Адаптивность BOOKING --- */
+@media (max-width: 768px) {
+    .booking-title {
+      font-size: 45px;
+    }
+    .booking-subtitle {
+      font-size: 30px;
+    }
+    .step-text {
+      font-size: 24px;
+    }
+    .step-icon {
+      width: 40px;
+      height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-title {
+      font-size: 35px;
+    }
+    .booking-subtitle {
+      font-size: 24px;
+    }
+    .step-text {
+      font-size: 20px;
+    }
+    .step-icon {
+      width: 35px;
+      height: 35px;
+    }
+}
+
+/* ========================================
+   5. CUSTOMER REVIEWS
+======================================== */
+.reviews {
+    background: url("images/luxury-beige-background-free-vector.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.reviews-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reviews-title {
+    font-size: 60px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reviews-subtitle {
+    font-size: 40px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Сетка карточек */
+.reviews-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Каждая карточка */
+.review-card {
+    background-color: #F3E1B1; /* Фон карточки */
+    border-radius: 10px;
+    width: 250px; 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Аватар */
+.review-avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Имя и возраст */
+.review-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Текст отзыва */
+.review-text {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Блок звёзд */
+.review-stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Каждая звезда */
+.star-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* --- Адаптивность REVIEWS --- */
+@media (max-width: 768px) {
+    .reviews-title {
+      font-size: 45px;
+    }
+    .reviews-subtitle {
+      font-size: 30px;
+    }
+    .review-card {
+      width: 220px;
+      margin: 0 auto;
+    }
+    .review-name {
+      font-size: 18px;
+    }
+    .review-text {
+      font-size: 16px;
+    }
+    .star-icon {
+      width: 25px;
+      height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-title {
+      font-size: 35px;
+    }
+    .reviews-subtitle {
+      font-size: 24px;
+    }
+    /* Сетка 2 на 2 для отзывов */
+    .reviews-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .review-card {
+      width: 100%;
+      max-width: 300px;
+    }
+    .review-name {
+      font-size: 16px;
+    }
+    .review-text {
+      font-size: 14px;
+    }
+    .star-icon {
+      width: 20px;
+      height: 20px;
+    }
+}
+
+/* ========================================
+   6. CONTACTS
+======================================== */
+.contacts {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("images/beige-textured-background.jpg") no-repeat center center; 
+    background-size: cover;
+    padding: 60px 0;
+    text-align: left;
+}
+
+.contacts-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacts-title {
+    font-size: 60px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contacts-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+/* Левая часть (текст) */
+.contacts-info {
+    flex: 1;
+    font-size: 30px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.contacts-info p {
+    margin-bottom: 15px;
+}
+
+/* Правая часть (изображение) */
+.contacts-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Адаптивность CONTACTS --- */
+@media (max-width: 768px) {
+    .contacts-title {
+      font-size: 45px;
+    }
+    .contacts-info {
+      font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-title {
+      font-size: 35px;
+    }
+    .contacts-info {
+      font-size: 18px;
+    }
+    .contacts-content {
+      /* Включаем колонку */
+      flex-direction: column;
+      align-items: center; 
+    }
+    .contacts-img {
+      /* Можно добавить небольшой отступ сверху,
+         чтобы картинка не "липла" к тексту */
+      margin-top: 20px;
+    }
+  }
+  
+
+/* ========================================
+   7. FOOTER
+======================================== */
+.footer {
+    background-color: #000; /* Чёрный фон */
+    color: #fff;            /* Белый текст */
+    text-align: center;
+    padding: 30px 0;        /* Отступы сверху и снизу */
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Копирайт */
+.footer-copy {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/* Ссылки */
+.footer-links {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f6e3a9;
+}
+
+/* Соцсети */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* --- Адаптивность FOOTER --- */
+@media (max-width: 480px) {
+    .footer-copy,
+    .footer-links {
+      font-size: 16px;
+    }
+    .social-icon {
+      width: 30px;
+      height: 30px;
+    }
+}
