@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Важный meta-тег для корректной адаптации на мобильных устройствах -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Твой сайт с бургером</title>
+  <!-- Импорт шрифта Sora из Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Подключаем внешний файл CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Шапка сайта (header) -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Логотип -->
+        <div class="logo">
+          <img src="logo123.jpg" alt="Логотип">
+        </div>
+
+        <!-- Меню навигации -->
+        <ul class="nav-menu">
+          <li><a href="#home">Home <img src="arrow.png" alt="arrow"></a></li>
+          <li><a href="#about">About <img src="arrow.png" alt="arrow"></a></li>
+          <li><a href="#blog">Blog <img src="arrow.png" alt="arrow"></a></li>
+          <li><a href="#pages">Pages <img src="arrow.png" alt="arrow"></a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <!-- Market logo перед кнопкой Login -->
+        <img src="market_logo.png" alt="Market Logo" class="market-logo">
+
+        <!-- Кнопка "Login" -->
+        <button class="login-btn">Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Главный баннер (Hero) -->
+  <section class="hero">
+    <div class="container hero-content">
+      
+      <!-- Текстовая часть -->
+      <div class="hero-text">
+        <h1>Tasty Chicken Burger - Fast &amp; Flavorful!</h1>
+        <p>Sink Your Teeth Into Our Mouthwatering Chicken Burger, Made With A Crispy, Juicy Chicken Patty, Fresh Lettuce, Ripe Tomatoes, And A Perfectly Toasted Bun.</p>
+        
+        <div class="hero-buttons">
+          <button class="order-btn">Order Now</button>
+          <button class="view-menu-btn">View Menu</button>
+        </div>
+
+        <!-- Блок с 5 мини-изображениями -->
+        <div class="menu-images">
+          <img src="burger1234567.jpg" alt="Мини-бургер 1">
+          <img src="burger12345678.jpg" alt="Мини-бургер 2">
+          <img src="burger1234.png" alt="Мини-бургер 3">
+          <img src="burger12345.jpg" alt="Мини-бургер 4">
+          <img src="burger123456.jpg" alt="Мини-бургер 5">
+        </div>
+      </div>
+
+      <!-- Изображение бургера с наложением красной/оранжевой подложки -->
+      <div class="hero-image">
+        <!-- Красная/оранжевая подложка -->
+        <img src="red_image.png" alt="Подложка" class="red-overlay">
+        <!-- Основной бургер -->
+        <img src="burger123.png" alt="Бургер" class="burger-image">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Секция с карточками бургеров -->
+  <section class="burgers-section">
+    <div class="container">
+      <div class="burgers-grid">
+        
+        <!-- Карточка 1 (чёрный фон) -->
+        <div class="burger-card black-bg">
+          <img src="tastyburg.png" alt="Burger 1" class="burger-img">
+          <h2 class="burger-title">Super Delicious Burger</h2>
+          <p class="burger-desc">
+            A super delicious burger is a perfect mix of a juicy patty, melted cheese, 
+            crisp veggies, and a soft toasted bun, all packed with rich flavors in every bite!
+          </p>
+          <button class="order-now-btn">Order Now</button>
+        </div>
+        
+        <!-- Карточка 2 (красный фон) -->
+        <div class="burger-card red-bg">
+          <img src="tastyburger12345.png" alt="Burger 2" class="burger-img">
+          <h2 class="burger-title">Super Delicious Burger</h2>
+          <p class="burger-desc">
+            A super delicious burger is a perfect mix of a juicy patty, melted cheese, 
+            crisp veggies, and a soft toasted bun, all packed with rich flavors in every bite!
+          </p>
+          <button class="order-now-btn">Order Now</button>
+        </div>
+        
+        <!-- Карточка 3 (золотистый фон) -->
+        <div class="burger-card gold-bg">
+          <img src="tastyburg123.png" alt="Burger 3" class="burger-img">
+          <h2 class="burger-title">Super Delicious Burger</h2>
+          <p class="burger-desc">
+            A super delicious burger is a perfect mix of a juicy patty, melted cheese, 
+            crisp veggies, and a soft toasted bun, all packed with rich flavors in every bite!
+          </p>
+          <button class="order-now-btn">Order Now</button>
+        </div>
+        
+        <!-- Карточка 4 (синий фон) -->
+        <div class="burger-card blue-bg">
+          <img src="tastyburg1234.webp" alt="Burger 4" class="burger-img">
+          <h2 class="burger-title">Super Delicious Burger</h2>
+          <p class="burger-desc">
+            A super delicious burger is a perfect mix of a juicy patty, melted cheese, 
+            crisp veggies, and a soft toasted bun, all packed with rich flavors in every bite!
+          </p>
+          <button class="order-now-btn">Order Now</button>
+        </div>
+
+      </div><!-- .burgers-grid -->
+    </div><!-- .container -->
+  </section><!-- .burgers-section -->
+  
+
+</body>
+</html>
