@@ -1,413 +1,708 @@
 /* Сброс базовых отступов */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Общие стили для страницы */
 body {
-    font-family: 'Sora', Arial, sans-serif;
-    /* Вместо градиента делаем белый фон */
-    background: #fff;
-    color: #333;
-    overflow-x: hidden;
+  font-family: 'Sora', Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
 }
 
 /* Контейнер для ограничения ширины контента */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 /* Шапка сайта */
 .header {
-    background-color: #FECF42;
-    border-bottom: 1px solid #000;
+  background-color: #FECF42;
+  border-bottom: 1px solid #000;
 }
 
 /* Навигация */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Логотип */
 .logo img {
-    max-height: 125px;
-    border-radius: 15px;
+  max-height: 125px;
+  border-radius: 15px;
 }
 
 /* Список навигационных ссылок */
 .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 1.25rem;
-    opacity: 0.5; /* Все пункты слегка прозрачны */
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.25rem;
+  opacity: 0.5;
 }
 
 /* Первая ссылка "Home" более яркая */
 .nav-menu li:first-child a {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Иконки стрелки */
 .nav-menu li a img {
-    width: 25px;
-    height: auto;
-    margin-left: 5px;
-    vertical-align: middle;
-    opacity: 0.5;
+  width: 25px;
+  height: auto;
+  margin-left: 5px;
+  vertical-align: middle;
+  opacity: 0.5;
 }
 .nav-menu li:first-child a img {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Market logo перед кнопкой Login */
 .market-logo {
-    max-height: 55px;
-    margin-right: -150px;
+  max-height: 55px;
+  margin-right: -150px;
 }
 
 /* Кнопка "Login" */
 .login-btn {
-    background-color: #D82926;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: white;
-    border: none;
-    border-radius: 4px;
+  background-color: #D82926;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
 }
 
 /* Блок Hero (главный баннер) */
 .hero {
-    /* Вместо body используем градиент здесь */
-    background: linear-gradient(to bottom, #FECF42, #FECE41, #FFFFFF);
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+  background: linear-gradient(to bottom, #FECF42, #FECE41, #FFFFFF);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 0;
 }
 
 /* Текст в Hero */
 .hero-text {
-    flex: 1 1 500px;
-    margin-left: -225px; /* "Сдвиг" для больших экранов */
-    margin-bottom: 50px;
+  flex: 1 1 500px;
+  margin-left: -225px;
+  margin-bottom: 50px;
 }
 
-/* Главный заголовок (Sora Bold 75px) */
 .hero-text h1 {
-    font-size: 75px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    color: black;
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: black;
 }
 
-/* Описание (Sora Regular 27px) */
 .hero-text p {
-    font-size: 27px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    color: black;
+  font-size: 27px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: black;
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-/* Кнопки в Hero */
+.view-menu-btn, .order-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
 .view-menu-btn {
-    background-color: white;
-    color: black;
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+  background-color: white;
+  color: black;
+  border: none;
 }
 
 .order-btn {
-    background-color: #D82926;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+  background-color: #D82926;
+  color: white;
+  border: none;
 }
 
 .view-menu-btn:hover,
 .order-btn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* Мини-изображения */
 .menu-images {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .menu-images img {
-    width: 95px;
-    height: auto;
-    border-radius: 4px;
-    opacity: 0.5;
+  width: 95px;
+  height: auto;
+  border-radius: 4px;
+  opacity: 0.5;
 }
+
 .menu-images img:nth-child(3) {
-    opacity: 1;
-    border: 1px solid #cc0000;
+  opacity: 1;
+  border: 1px solid #cc0000;
 }
 
 /* Блок бургера и подложки */
 .hero-image {
-    position: relative;
-    flex: 1 1 400px;
-    max-width: 550px;
-    margin-top: 20px;
+  position: relative;
+  flex: 1 1 400px;
+  max-width: 550px;
+  margin-top: 20px;
 }
 
 /* Подложка */
 .red-overlay {
-    position: absolute;
-    top: -20px;
-    right: -300px;
-    max-width: 845px;
-    height: auto;
-    z-index: 0;
-    opacity: 0.5;
+  position: absolute;
+  top: -20px;
+  right: -300px;
+  max-width: 845px;
+  height: auto;
+  z-index: 0;
+  opacity: 0.5;
 }
 
 /* Основной бургер */
 .burger-image {
-    position: relative;
-    width: 1150px;
-    right: 100px;
-    height: auto;
-    z-index: 1;
+  position: relative;
+  width: 1150px;
+  right: 100px;
+  height: auto;
+  z-index: 1;
 }
 
 /* ===== Мобильная адаптация ===== */
 @media (max-width: 768px) {
-    /* Шапка (header) */
-    .navbar {
+  .navbar {
       flex-wrap: wrap;
       justify-content: center;
-    }
-    .logo img {
+  }
+
+  .logo img {
       max-height: 80px;
-    }
-    .market-logo {
+  }
+
+  .market-logo {
       max-height: 40px;
       margin-right: 0;
-    }
-    .nav-menu {
+  }
+
+  .nav-menu {
       width: 100%;
       justify-content: center;
       gap: 10px;
       margin-top: 10px;
-    }
-    .login-btn {
+  }
+
+  .login-btn {
       font-size: 1.2rem;
       padding: 8px 12px;
       margin-top: 10px;
-    }
-    
-    /* Hero-контент складывается в колонку */
-    .hero-content {
+  }
+
+  .hero-content {
       flex-direction: column;
       align-items: center;
-    }
-    
-    /* Убираем отрицательный отступ у текста, 
-       центрируем текст */
-    .hero-text {
+  }
+
+  .hero-text {
       margin-left: 0;
       text-align: center;
       margin-bottom: 30px;
-    }
+  }
 
-    /* Уменьшаем размеры шрифта */
-    .hero-text h1 {
-      font-size: 50px;  /* Было 75px */
-    }
-    .hero-text p {
-      font-size: 18px;  /* Было 27px */
-    }
+  .hero-text h1 {
+      font-size: 50px;
+  }
 
-    /* Контейнер под бургер */
-    .hero-image {
+  .hero-text p {
+      font-size: 18px;
+  }
+
+  .hero-image {
       max-width: 90%;
       margin-top: 20px;
-    }
-    
-    /* Бургер и подложка полностью умещаются по ширине экрана */
-    .burger-image {
-      width: 100%;
-      right: 0; /* убираем смещение */
-    }
-    .red-overlay {
-      right: 0; 
-      max-width: 100%;
-    }
-}
+  }
 
+  .burger-image {
+      width: 100%;
+      right: 0;
+  }
+
+  .red-overlay {
+      right: 0;
+      max-width: 100%;
+  }
+}
 
 /* Секция с карточками бургеров */
 .burgers-section {
-    width: 100%;
-    max-width: 1920px;
-    height: 900px; /* Фиксированная высота секции */
-    display: flex;
-    align-items: center; /* Центрирование по вертикали */
-    justify-content: center; /* Центрирование по горизонтали */
-    background-color: #fff; /* Белый фон */
-    padding: 40px 0; /* Отступы сверху и снизу */
-    overflow: hidden; /* На случай, если что-то вылезает */
-  }
-  
-  /* Сетка для карточек (2×2) */
-  .burgers-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 45px;
-    width: 100%;
-    height: 100%;
-    place-items: center; /* Центрируем карточки в ячейках */
-  }
-  
-  /* Общие стили карточек */
-  .burger-card {
-    width: 700px;  /* Ширина карточки */
-    height: 450px; /* Высота карточки */
-    border-radius: 12px;
-    padding: 40px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    box-sizing: border-box;
-  }
-  
-  /* Фоновые стили (примеры) */
-  .burger-card.black-bg {
-    background: url('black.jpg') no-repeat center center;
-    background-size: cover;
-  }
-  
-  .burger-card.red-bg {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(216, 41, 38, 0.8));
-    background-size: cover;
-  }
-  
-  .burger-card.gold-bg {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(200, 161, 6, 0.8));
-    background-size: cover;
-  }
-  
-  .burger-card.blue-bg {
-    background: url('blue_fon.png') no-repeat center center;
-    background-size: cover;
-  }
-  
-  /* Изображение бургера внутри карточки */
-  .burger-img {
-    position: absolute;
-    right: 20px;
-    bottom: 50px;
-    width: 300px; 
-    height: auto;
-    border-radius: 6px;
-    z-index: 1;
-  }
-  
-  /* Название бургера */
-  .burger-title {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
-    font-size: 50px;
-    margin-bottom: 20px;
-    z-index: 1;
-  }
-  
-  /* Описание бургера */
-  .burger-desc {
-    font-family: 'Noto Sans Display', sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    z-index: 1;
-    max-width: 350px;
-  }
-  
-  /* Кнопка Order Now */
-  .order-now-btn {
-    background-color: #FF0000;
-    color: #fff;
-    border: none;
-    padding: 14px 24px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 600;
-    z-index: 1;
-    transition: background-color 0.3s;
-  }
-  
-  .order-now-btn:hover {
-    background-color: #cc0000;
-  }
+  width: 100%;
+  padding: 40px 0;
+  background-color: #fff;
+  display: flex;
+}
 
-/* ===== Адаптация для мобильных (пример) ===== */
+/* Сетка для карточек бургеров */
+.burgers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки на всех экранах */
+  gap: 15px;
+  height: 825px;
+  width: 1920px;
+  padding: 0 20px;
+  margin-left: -275px; /* Сдвигаем сетку влево */
+}
+
+/* Карточка бургера */
+.burger-card {
+  position: relative;
+  width: 750px;
+  height: 350px;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Стиль фонов карточек */
+.burger-card.black-bg {
+  background: url('black.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.burger-card.red-bg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(216, 41, 38, 0.8));
+  background-size: cover;
+}
+
+.burger-card.gold-bg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(200, 161, 6, 0.8));
+  background-size: cover;
+}
+
+.burger-card.blue-bg {
+  background: url('blue_fon.png') no-repeat center center;
+  background-size: cover;
+}
+
+/* Изображение бургера внутри карточки */
+.burger-img {
+  position: absolute;
+  bottom: 50px;
+  width: 400px;
+  height: auto;
+  right: -10px;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+/* Название бургера */
+.burger-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+/* Описание бургера */
+.burger-desc {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+/* Кнопка Order Now */
+.order-now-btn {
+  background-color: #FF0000;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 150px;
+}
+
+.order-now-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .burgers-grid {
-    justify-content: center;
+      grid-template-columns: 1fr 1fr; /* 2 колонки на мобильных устройствах */
   }
+
   .burger-card {
-    width: 90%;  /* карточки занимают почти всю ширину экрана */
-    height: auto; 
-    margin: 0 auto;
+      max-width: 100%; /* Карточка на всю ширину экрана */
+      height: auto; /* Высота автоматически адаптируется */
   }
+
   .burger-img {
-    width: 120px; 
+      width: 180px; /* Уменьшаем картинку для мобильных */
   }
+
   .burger-title {
-    font-size: 28px; 
+      font-size: 22px; /* Меньший размер текста */
   }
+
   .burger-desc {
-    font-size: 16px;
-    max-width: 100%;
+      font-size: 14px; /* Меньший размер описания */
+  }
+
+  .order-now-btn {
+      font-size: 14px; /* Меньший размер кнопки */
   }
 }
+
+.menu-section {
+  width: 100%;
+  margin: 0 auto;
+  transform: translateX(50px) translateY(-350px);
+}
+
+/* Секция с популярным меню */
+.popular-menu {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Заголовок секции */
+.popular-menu-title {
+  text-align: left;
+  font-size: 36px;
+  font-weight: 700;
+  color: #D82926;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.popular-menu-subtitle {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+  margin-left: 50px;
+}
+
+.main-burger {
+  transform: translateX(50px) translateY(611px); /* Сдвигаем бургер на 50px вправо и 100px вниз */
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2.5px solid #333;
+  width: 250px;
+  height: 476px;
+  z-index: 1;
+}
+
+/* Изображение и название бургер */
+.burger-image123 {
+  transform: translateX(-40px) translateY(100px); /* Сдвигаем бургер на 50px вправо и 100px вниз */
+  width: 305px;
+  border-radius: 12px;
+}
+
+.burger-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+}
+
+.burger-products {
+  font-size: 16px;
+  color: #888;
+}
+
+/* Контейнер для продуктов */
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 300px; /* Создаем отступ слева для бургерного элемента */
+}
+
+/* Продукты */
+.menu-item {
+  width: 21%; /* Увеличиваем ширину карточки */
+  height: 238px; /* Увеличиваем высоту карточки */
+  text-align: left;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Картинка справа */
+  align-items: center; /* Центрируем элементы по вертикали */
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2.5px solid #333;
+}
+
+.menu-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Закругляем иконки */
+  padding: 10px;
+  background-color: #FFDD57;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Используем flex для центрирования */
+  justify-content: center; /* Центрируем изображение внутри иконки */
+  align-items: center; /* Центрируем изображение внутри иконки */
+}
+
+/* Контейнер для текста в карточке */
+.menu-item-info {
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание текста */
+  align-items: flex-start; /* Выравнивание по левому краю */
+}
+
+/* Название продукта */
+.menu-item-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Количество продуктов */
+.menu-item-products {
+  font-size: 15px;
+  color: #888;
+  text-align: left;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .menu-items {
+      justify-content: center;
+  }
+
+  .menu-item {
+      width: 45%; /* Уменьшаем ширину до 45% на мобильных устройствах */
+  }
+
+  .menu-icon {
+      width: 100px;
+      height: 100px;
+  }
+
+  .menu-item-title {
+      font-size: 18px;
+  }
+
+  .menu-item-products {
+      font-size: 14px;
+  }
+}
+
+
+
+/* ====== МОБИЛЬНАЯ АДАПТАЦИЯ ====== */
+@media (max-width: 768px) {
+
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    max-height: 80px;
+  }
+
+  .market-logo {
+    max-height: 40px;
+    margin-right: 0;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .login-btn {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .burger-image {
+    width: 100%;
+    right: 0;
+  }
+
+  .red-overlay {
+    right: 0;
+    max-width: 100%;
+  }
+
+  .burgers-section {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .burgers-grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .burger-card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .burger-img {
+    width: 200px;
+    bottom: 20px;
+  }
+
+  .burger-title {
+    font-size: 22px;
+  }
+
+  .burger-desc {
+    font-size: 16px;
+  }
+
+  .order-now-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .menu-section {
+    transform: none;
+    padding: 20px;
+  }
+
+  .popular-menu-title,
+  .popular-menu-subtitle {
+    text-align: center;
+    margin-left: 0;
+  }
+
+
+  .burger-image123 {
+    transform: none;
+    width: 100%;
+  }
+
+  .main-burger {
+    transform: none;
+    margin: 0 auto 30px;
+    width: 90%;
+    height: auto;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .menu-item {
+    width: 90%;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+    text-align: center;
+  }
+
+  .menu-icon {
+    margin-top: 10px;
+  }
+
+  .menu-item-info {
+    align-items: center;
+  }
+
+  .menu-item-title,
+  .menu-item-products {
+    text-align: center;
+  }
+}
+
