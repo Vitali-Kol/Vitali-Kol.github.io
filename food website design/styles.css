@@ -667,15 +667,11 @@ body {
 
 
   .burger-image123 {
-    transform: none;
-    width: 100%;
+    display: none;
   }
 
   .main-burger {
-    transform: none;
-    margin: 0 auto 30px;
-    width: 90%;
-    height: auto;
+display: none;
   }
 
   .menu-items {
@@ -705,4 +701,6 @@ body {
     text-align: center;
   }
 }
+
+
 
