@@ -11,12 +11,12 @@ body {
   background: #fff;
   color: #333;
   overflow-x: hidden;
+  width: 100%;
 }
 
 /* Контейнер для ограничения ширины контента */
 .container {
-  width: 90%;
-  max-width: 1250px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -24,6 +24,7 @@ body {
 .header {
   background-color: #FECF42;
   border-bottom: 1px solid #000;
+  padding: 10px 0;
 }
 
 /* Навигация */
@@ -31,53 +32,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
-
-/* Логотип */
 .logo img {
   max-height: 125px;
   border-radius: 15px;
 }
-
-/* Список навигационных ссылок */
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-
 .nav-menu li a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   font-size: 1.25rem;
-  opacity: 0.5;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
-
-/* Первая ссылка "Home" более яркая */
 .nav-menu li:first-child a {
   opacity: 1;
 }
-
-/* Иконки стрелки */
 .nav-menu li a img {
   width: 25px;
   height: auto;
   margin-left: 5px;
   vertical-align: middle;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .nav-menu li:first-child a img {
   opacity: 1;
 }
-
-/* Market logo перед кнопкой Login */
 .market-logo {
   max-height: 55px;
-  margin-right: -150px;
+  margin-right: -490px;
 }
-
-/* Кнопка "Login" */
 .login-btn {
   background-color: #D82926;
   padding: 8px 16px;
@@ -87,6 +77,10 @@ body {
   color: white;
   border: none;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #B52A1E;
 }
 
 /* Блок Hero (главный баннер) */
@@ -98,7 +92,6 @@ body {
   justify-content: center;
   padding: 0;
 }
-
 .hero-content {
   display: flex;
   align-items: center;
@@ -108,13 +101,36 @@ body {
   padding: 20px 0;
 }
 
-/* Текст в Hero */
+/* Блок бургера и подложки */
+.hero-image {
+  position: relative;
+  flex: 1 1 400px;
+  max-width: 550px;
+  margin-top: 20px;
+}
+.burger-image {
+  position: relative;
+  width: 1150px;
+  right: 100px;
+  height: auto;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.red-overlay {
+  position: absolute;
+  top: -20px;
+  right: -300px;
+  max-width: 845px;
+  height: auto;
+  z-index: 0;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
 .hero-text {
   flex: 1 1 500px;
   margin-left: -225px;
   margin-bottom: 50px;
 }
-
 .hero-text h1 {
   font-size: 75px;
   font-weight: 700;
@@ -122,7 +138,6 @@ body {
   line-height: 1.2;
   color: black;
 }
-
 .hero-text p {
   font-size: 27px;
   font-weight: 400;
@@ -130,32 +145,28 @@ body {
   line-height: 1.5;
   color: black;
 }
-
 .hero-buttons {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
 }
-
-.view-menu-btn, .order-btn {
+.view-menu-btn,
+.order-btn {
   padding: 12px 24px;
   font-size: 1rem;
   border-radius: 4px;
   transition: background-color 0.3s;
 }
-
 .view-menu-btn {
   background-color: white;
   color: black;
   border: none;
 }
-
 .order-btn {
   background-color: #D82926;
   color: white;
   border: none;
 }
-
 .view-menu-btn:hover,
 .order-btn:hover {
   opacity: 0.8;
@@ -168,109 +179,15 @@ body {
   margin-top: 20px;
   flex-wrap: wrap;
 }
-
 .menu-images img {
   width: 95px;
   height: auto;
   border-radius: 4px;
   opacity: 0.5;
 }
-
 .menu-images img:nth-child(3) {
   opacity: 1;
   border: 1px solid #cc0000;
-}
-
-/* Блок бургера и подложки */
-.hero-image {
-  position: relative;
-  flex: 1 1 400px;
-  max-width: 550px;
-  margin-top: 20px;
-}
-
-/* Подложка */
-.red-overlay {
-  position: absolute;
-  top: -20px;
-  right: -300px;
-  max-width: 845px;
-  height: auto;
-  z-index: 0;
-  opacity: 0.5;
-}
-
-/* Основной бургер */
-.burger-image {
-  position: relative;
-  width: 1150px;
-  right: 100px;
-  height: auto;
-  z-index: 1;
-}
-
-/* ===== Мобильная адаптация ===== */
-@media (max-width: 768px) {
-  .navbar {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-
-  .logo img {
-      max-height: 80px;
-  }
-
-  .market-logo {
-      max-height: 40px;
-      margin-right: 0;
-  }
-
-  .nav-menu {
-      width: 100%;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
-  }
-
-  .login-btn {
-      font-size: 1.2rem;
-      padding: 8px 12px;
-      margin-top: 10px;
-  }
-
-  .hero-content {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .hero-text {
-      margin-left: 0;
-      text-align: center;
-      margin-bottom: 30px;
-  }
-
-  .hero-text h1 {
-      font-size: 50px;
-  }
-
-  .hero-text p {
-      font-size: 18px;
-  }
-
-  .hero-image {
-      max-width: 90%;
-      margin-top: 20px;
-  }
-
-  .burger-image {
-      width: 100%;
-      right: 0;
-  }
-
-  .red-overlay {
-      right: 0;
-      max-width: 100%;
-  }
 }
 
 /* Секция с карточками бургеров */
@@ -279,84 +196,70 @@ body {
   padding: 40px 0;
   background-color: #fff;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
-/* Сетка для карточек бургеров */
 .burgers-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 колонки на всех экранах */
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  height: 825px;
-  width: 1920px;
+  max-width: 100%;
   padding: 0 20px;
-  margin-left: -275px; /* Сдвигаем сетку влево */
+  margin: 0 auto;
 }
-
-/* Карточка бургера */
 .burger-card {
   position: relative;
-  width: 750px;
-  height: 350px;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
   border-radius: 12px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  box-sizing: border-box;
   overflow: hidden;
   z-index: 1;
+  box-sizing: border-box;
 }
-
-/* Стиль фонов карточек */
+/* Фон карточек */
 .burger-card.black-bg {
   background: url('black.jpg') no-repeat center center;
   background-size: cover;
 }
-
 .burger-card.red-bg {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(216, 41, 38, 0.8));
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(216,41,38,0.8));
   background-size: cover;
 }
-
 .burger-card.gold-bg {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(200, 161, 6, 0.8));
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(200,161,6,0.8));
   background-size: cover;
 }
-
 .burger-card.blue-bg {
   background: url('blue_fon.png') no-repeat center center;
   background-size: cover;
 }
-
-/* Изображение бургера внутри карточки */
 .burger-img {
   position: absolute;
-  bottom: 50px;
+  bottom: 10px;
   width: 400px;
   height: auto;
   right: -10px;
   border-radius: 6px;
   z-index: -1;
 }
-
-/* Название бургера */
-.burger-title {
+.burger-card .burger-title {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 10px;
   z-index: 1;
 }
-
-/* Описание бургера */
 .burger-desc {
   font-size: 30px;
   line-height: 1.5;
   margin-bottom: 20px;
   z-index: 1;
 }
-
-/* Кнопка Order Now */
 .order-now-btn {
   background-color: #FF0000;
   color: white;
@@ -368,52 +271,21 @@ body {
   transition: background-color 0.3s;
   width: 150px;
 }
-
 .order-now-btn:hover {
   background-color: #cc0000;
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-  .burgers-grid {
-      grid-template-columns: 1fr 1fr; /* 2 колонки на мобильных устройствах */
-  }
-
-  .burger-card {
-      max-width: 100%; /* Карточка на всю ширину экрана */
-      height: auto; /* Высота автоматически адаптируется */
-  }
-
-  .burger-img {
-      width: 180px; /* Уменьшаем картинку для мобильных */
-  }
-
-  .burger-title {
-      font-size: 22px; /* Меньший размер текста */
-  }
-
-  .burger-desc {
-      font-size: 14px; /* Меньший размер описания */
-  }
-
-  .order-now-btn {
-      font-size: 14px; /* Меньший размер кнопки */
-  }
-}
-
+/* Секция с популярным меню */
 .menu-section {
   width: 100%;
   margin: 0 auto;
-  transform: translateX(50px) translateY(-350px);
+  transform: translateX(110px) translateY(-350px);
 }
-
-/* Секция с популярным меню */
 .popular-menu {
   width: 100%;
+  height: 825px;
   background-color: #fff;
 }
-
-/* Заголовок секции */
 .popular-menu-title {
   text-align: left;
   font-size: 36px;
@@ -422,7 +294,6 @@ body {
   margin-bottom: 20px;
   margin-left: 50px;
 }
-
 .popular-menu-subtitle {
   text-align: left;
   font-size: 24px;
@@ -431,33 +302,29 @@ body {
   margin-bottom: 40px;
   margin-left: 50px;
 }
-
+/* Блок главного бургера */
 .main-burger {
-  transform: translateX(50px) translateY(611px); /* Сдвигаем бургер на 50px вправо и 100px вниз */
+  transform: translateX(50px) translateY(611px);
   text-align: center;
   background-color: white;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border: 2.5px solid #333;
   width: 250px;
   height: 476px;
   z-index: 1;
 }
-
-/* Изображение и название бургер */
 .burger-image123 {
-  transform: translateX(-40px) translateY(100px); /* Сдвигаем бургер на 50px вправо и 100px вниз */
+  transform: translateX(-40px) translateY(100px);
   width: 305px;
   border-radius: 12px;
 }
-
-.burger-title {
+.main-burger .burger-title {
   font-size: 20px;
   font-weight: 600;
   color: white;
   margin-top: 10px;
 }
-
 .burger-products {
   font-size: 16px;
   color: #888;
@@ -467,44 +334,37 @@ body {
 .menu-items {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 300px; /* Создаем отступ слева для бургерного элемента */
+  margin-left: 300px;
 }
-
-/* Продукты */
 .menu-item {
-  width: 21%; /* Увеличиваем ширину карточки */
-  height: 238px; /* Увеличиваем высоту карточки */
+  width: 21%;
+  height: 238px;
   text-align: left;
   background-color: white;
   padding: 20px;
   display: flex;
-  flex-direction: row; /* Картинка справа */
-  align-items: center; /* Центрируем элементы по вертикали */
+  flex-direction: row;
+  align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border: 2.5px solid #333;
 }
-
 .menu-icon {
   width: 120px;
   height: 120px;
-  border-radius: 50%; /* Закругляем иконки */
+  border-radius: 50%;
   padding: 10px;
   background-color: #FFDD57;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex; /* Используем flex для центрирования */
-  justify-content: center; /* Центрируем изображение внутри иконки */
-  align-items: center; /* Центрируем изображение внутри иконки */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-/* Контейнер для текста в карточке */
 .menu-item-info {
   display: flex;
-  flex-direction: column; /* Вертикальное выравнивание текста */
-  align-items: flex-start; /* Выравнивание по левому краю */
+  flex-direction: column;
+  align-items: flex-start;
 }
-
-/* Название продукта */
 .menu-item-title {
   font-size: 20px;
   font-weight: 600;
@@ -512,195 +372,358 @@ body {
   margin-bottom: 10px;
   text-align: left;
 }
-
-/* Количество продуктов */
 .menu-item-products {
   font-size: 15px;
   color: #888;
   text-align: left;
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-  .menu-items {
-      justify-content: center;
-  }
+/* ========== Секция: Why Choose Us? ========== */
+.why-choose-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+.section-title p {
+  color: #D82926;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 75px;
+}
+.ingredients-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+.info-box {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+/* Заголовки и описание */
+.info-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+.info-box p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.info-box .price {
+  font-weight: 700;
+  color: #D82926;
+  font-size: 1rem;
+}
+/* Позиционирование карточек */
+.top-left {
+  grid-column: 1;
+  grid-row: 1;
+  margin-right: auto;
+}
+.bottom-left {
+  grid-column: 1;
+  grid-row: 2;
+  margin-right: auto;
+}
+.top-right {
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: auto;
+}
+.bottom-right {
+  grid-column: 2;
+  grid-row: 2;
+  margin-left: auto;
+}
+/* Центральное изображение бургера */
+.burger-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.burger-center img {
+  width: 475px;
+  height: auto;
+}
+/* Линии соединения */
+.info-box {
+  position: relative;
+}
+.top-left::after,
+.bottom-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -145px;
+  width: 145px;
+  height: 2px;
+  background-color: gray;
+}
+.top-right::before,
+.bottom-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -145px;
+  width: 145px;
+  height: 2px;
+  background-color: gray;
+}
 
-  .menu-item {
-      width: 45%; /* Уменьшаем ширину до 45% на мобильных устройствах */
+/* ========== Секция: Hero Delivery ========== */
+.hero-delivery {
+  position: relative;
+  padding: 40px 0;
+  background: #ffe9c6;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  margin-top: 50px;
+}
+.hero-content.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1080px;
+}
+.hero-text {
+  flex: 1 1 500px;
+  margin-right: 20px;
+  max-width: 600px;
+}
+.hero-title {
+  font-size: 2rem;
+  color: #e14f4f;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+  max-width: 1000%;
+  width: 250%;
+}
+.delivery-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #ff6060;
+  font-weight: 600;
+  font-family: 'Pattaya', sans-serif;
+}
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  color: #333;
+}
+.hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555;
+}
+.price-box {
+  margin-bottom: 10px;
+}
+.price-box p {
+  font-size: 1rem;
+  color: #444;
+}
+.price-box .highlight {
+  color: #e14f4f;
+  font-weight: bold;
+}
+.delivery-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.delivery-info p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+.order-num {
+  color: #e14f4f;
+  font-weight: 600;
+}
+.order-btn {
+  background-color: #e14f4f;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.order-btn:hover {
+  background-color: #c73f3f;
+}
+.hero-image {
+  position: relative;
+  flex: 1 1 400px;
+  text-align: center;
+  margin-top: 20px;
+}
+.courier-img {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+}
+.cloud1 {
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 150px;
+  opacity: 0.8;
+}
+.cloud2 {
+  position: absolute;
+  bottom: 10%;
+  top: -30%;
+  left: 30%;
+  width: 150px;
+  opacity: 0.8;
+}
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 1.8rem;
   }
-
-  .menu-icon {
-      width: 100px;
-      height: 100px;
+  .hero-subtitle {
+    font-size: 1.3rem;
   }
-
-  .menu-item-title {
-      font-size: 18px;
-  }
-
-  .menu-item-products {
-      font-size: 14px;
+  .courier-img {
+    width: 300px;
   }
 }
 
-
-
-/* ====== МОБИЛЬНАЯ АДАПТАЦИЯ ====== */
-@media (max-width: 768px) {
-
-  .container {
-    width: 95%;
-    padding: 0 10px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo img {
-    max-height: 80px;
-  }
-
-  .market-logo {
-    max-height: 40px;
-    margin-right: 0;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .login-btn {
-    font-size: 1.2rem;
-    padding: 8px 12px;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .hero-text {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 48px;
-  }
-
-  .hero-text p {
-    font-size: 18px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-image {
-    max-width: 100%;
-    margin-top: 30px;
-  }
-
-  .burger-image {
-    width: 100%;
-    right: 0;
-  }
-
-  .red-overlay {
-    right: 0;
-    max-width: 100%;
-  }
-
-  .burgers-section {
-    flex-direction: column;
-    padding: 20px 10px;
-  }
-
-  .burgers-grid {
-    grid-template-columns: 1fr;
-    margin-left: 0;
-    width: 100%;
-    height: auto;
-  }
-
-  .burger-card {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .burger-img {
-    width: 200px;
-    bottom: 20px;
-  }
-
-  .burger-title {
-    font-size: 22px;
-  }
-
-  .burger-desc {
-    font-size: 16px;
-  }
-
-  .order-now-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .menu-section {
-    transform: none;
-    padding: 20px;
-  }
-
-  .popular-menu-title,
-  .popular-menu-subtitle {
-    text-align: center;
-    margin-left: 0;
-  }
-
-
-  .burger-image123 {
-    display: none;
-  }
-
-  .main-burger {
-display: none;
-  }
-
-  .menu-items {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .menu-item {
-    width: 90%;
-    flex-direction: column-reverse;
-    align-items: center;
-    height: auto;
-    text-align: center;
-  }
-
-  .menu-icon {
-    margin-top: 10px;
-  }
-
-  .menu-item-info {
-    align-items: center;
-  }
-
-  .menu-item-title,
-  .menu-item-products {
-    text-align: center;
-  }
+/* Секция: Popular Dishes */
+.popular-dishes {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #fff;
+  position: relative;
 }
 
+/* Подзаголовок "Food Items" */
+.food-items-label {
+  color: #D82926;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-family: 'Pattaya', sans-serif;
+}
 
+/* Заголовок секции */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
 
+.filter-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 25px;
+  margin: -20px 0 30px auto; /* добавлен отрицательный margin-top */
+  max-width: 450px;
+}
+
+/* Стили ссылок в меню фильтра */
+.filter-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.filter-menu li a:hover {
+  background-color: #D82926;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.filter-menu li a.active {
+  background-color: #D82926;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/* Сетка карточек */
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 15px;
+  justify-items: center; /* централизует карточки по горизонтали */
+}
+
+/* Карточка блюда */
+.dish-card {
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  border-color: red;
+  position: relative; /* для абсолютного позиционирования вложенных элементов */
+  width: 475px;
+}
+
+/* Кнопка покупки (иконка) */
+.dish-card .buy-btn {
+  position: absolute;
+  bottom: 10px;  /* расположена в правом нижнем углу */
+  right: 10px;
+  width: 40px; /* задайте нужный размер */
+  height: auto;
+  cursor: pointer;
+}
+
+.dish-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.dish-image {
+  max-width: 175px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.dish-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+.dish-desc {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+.dish-price {
+  font-size: 1rem;
+  color: #D82926;
+  font-weight: 700;
+}
