@@ -1,0 +1,376 @@
+/* =========================================
+   Файл: styles-tablet.css
+   Описание: адаптация верстки под планшеты
+   Диапазон: от 768px до 1180px
+   Подключать после основного файла стилей
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1180px) {
+
+    /* --------------------------------------------------------------
+       1) БАЗОВАЯ НАСТРОЙКА СТРАНИЦЫ
+    -------------------------------------------------------------- */
+    body {
+      font-size: 17px; /* немного увеличили шрифт для планшетов */
+    }
+    
+    /* Контейнер – можно чуть ужать ширину */
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+
+    /* --------------------------------------------------------------
+       2) HEADER (шапка) – улучшенная адаптация
+    -------------------------------------------------------------- */
+    .header {
+      padding: 15px 0; /* немного увеличиваем отступ сверху/снизу */
+    }
+
+    .navbar {
+      flex-direction: row;       /* горизонтальное расположение */
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;                 /* промежуток между блоками */
+      padding: 0 15px;           /* небольшой горизонтальный отступ */
+    }
+
+    /* Лого маркета (например, Google Market и т.д.) */
+    .market-logo {
+      max-height: 40px; 
+      margin-right: 0; 
+    }
+
+
+    /* --------------------------------------------------------------
+       3) HERO-СЕКЦИЯ
+    -------------------------------------------------------------- */
+    .hero {
+      min-height: 70vh;    /* уменьшаем высоту */
+      padding: 40px 20px;  /* увеличенные отступы */
+      justify-content: center;
+    }
+  
+    .hero-content {
+      flex-wrap: wrap;     
+      justify-content: center;
+    }
+  
+    .hero-text {
+      margin-left: 0;      
+      margin-bottom: 30px;
+      text-align: center;  
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;     
+      margin-bottom: 15px;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    /* Кнопки в hero */
+    .hero-buttons {
+      gap: 10px;
+      margin-bottom: 30px;
+      justify-content: center;
+    }
+    .view-menu-btn,
+    .order-btn {
+      font-size: 1rem;
+      padding: 12px 20px;
+    }
+
+    /* Изображение бургера + overlay */
+    .hero-image {
+      flex: 1 1 100%;
+      max-width: 450px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .burger-image {
+      width: 100%;
+      right: 0;
+      max-width: 550px;
+    }
+    /* Убираем overlay (пример решения для планшетов) */
+    .red-overlay {
+      right: -50px;
+      max-width: 600px;
+      display: none;
+    }
+
+    /* Блок мини-изображений меню */
+    .menu-images {
+      justify-content: center;
+    }
+    .menu-images img {
+      width: 80px; 
+    }
+
+
+    /* --------------------------------------------------------------
+       4) КАРТОЧКИ БУРГЕРОВ
+    -------------------------------------------------------------- */
+    .burgers-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .burger-card {
+      max-width: 600px;
+      padding: 20px;
+    }
+    .burger-img {
+      width: 280px;
+      right: 0;
+    }
+
+
+    /* --------------------------------------------------------------
+       5) ПОПУЛЯРНОЕ МЕНЮ
+    -------------------------------------------------------------- */
+    .popular-menu {
+      height: auto;
+    }
+    .menu-section {
+      transform: none;
+      margin-top: 50px;
+    }
+    .popular-menu-title,
+    .popular-menu-subtitle {
+      text-align: center;
+      margin-left: 0;
+    }
+    .main-burger {
+      margin: 20px auto;
+      transform: none;
+      display: none; /* скрываем на планшетах */
+    }
+    .burger-image123 {
+      width: 280px;
+      transform: translateX(0) translateY(0);
+    }
+
+    .menu-items {
+      margin-left: 0;
+      justify-content: center;
+      gap: 15px;
+    }
+    .menu-item {
+      width: 45%;
+      margin-bottom: 15px;
+    }
+
+
+    /* --------------------------------------------------------------
+       6) WHY-CHOOSE-US – улучшенная адаптация
+    -------------------------------------------------------------- */
+    .why-choose-section {
+      width: 100%;
+      max-width: 1200px;     /* при желании можно ограничить ширину */
+      margin: 0 auto;        
+      padding: 40px 20px;    /* отступы */
+      text-align: center;    /* выравниваем заголовки по центру */
+    }
+
+    /* Контейнер с ингредиентами */
+    .ingredients-container {
+      display: flex;         /* размещаем содержимое в ряды/колонки */
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 30px;
+    }
+    .burger-center img {
+      width: 300px;
+      display: none;         /* скрыто на планшетах */
+    }
+
+    .top-left::after,
+    .bottom-left::after,
+    .top-right::before,
+    .bottom-right::before {
+      display: none;
+    }
+
+
+    /* --------------------------------------------------------------
+       7) СЕКЦИЯ DELIVERY
+    -------------------------------------------------------------- */
+    .hero-delivery {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      padding: 20px;
+    }
+    .hero-text123 {
+      margin-left: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .hero-text123 h1 {
+      font-size: 2rem;
+    }
+    .delivery-info {
+      margin-left: 0;
+      justify-content: center;
+    }
+    .courier-img {
+      width: 280px;
+      margin-top: 20px;
+    }
+
+
+    /* --------------------------------------------------------------
+       8) POPULAR DISHES
+    -------------------------------------------------------------- */
+    .dishes-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .dish-card {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+
+    /* --------------------------------------------------------------
+       9) CHEF SECTION
+    -------------------------------------------------------------- */
+    .chef-content {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      display: none; /* скрыто на планшетах */
+    }
+    .chef-titles {
+      position: static;
+      transform: none;
+      margin-bottom: 20px;
+    }
+    .chef-images {
+      width: 80%;
+      margin: 0 auto 20px;
+    }
+    .tasty-burger123 {
+      position: static;
+      transform: none;
+      margin-top: 20px;
+      width: 70%;
+    }
+    .chef-burgers {
+      width: 80%;
+      margin-top: 20px;
+    }
+    .burger-info {
+      width: 100%;
+      max-width: 450px;
+      margin: 20px auto;
+    }
+
+
+    /* --------------------------------------------------------------
+       10) TESTIMONIALS
+    -------------------------------------------------------------- */
+    .testimonials-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .testimonial-card {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+
+    /* --------------------------------------------------------------
+       11) INFO-SECTION (улучшенная адаптация)
+    -------------------------------------------------------------- */
+    .info-section {
+      padding: 50px 0; 
+      background-color: #FECE42;
+      background-image: none;
+    }
+
+    /* Колонки и прочее в info-section */
+    .info-container {
+      display: flex;
+      flex-direction: row;   /* две или более колонки в строке */
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    /* Каждая колонка */
+    .info-column {
+      flex: 1 1 250px;       /* базовая ширина */
+      margin-bottom: 30px;
+    }
+
+    /* Нижний блок футера внутри info-section */
+    .info-footer-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+      margin: 40px 0 0 0;    /* отступ сверху */
+      text-align: center;    /* при переносе будет смотреться аккуратнее */
+    }
+    .social-icons {
+      justify-content: center;
+    }
+
+
+    /* --------------------------------------------------------------
+       12) FOOTER (футер)
+    -------------------------------------------------------------- */
+    .footer {
+      padding: 1px 0;  /* небольшой отступ, чтобы футер не занимал много места */
+    }
+    .footer .navbar {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .footer .logo img {
+      max-height: 80px;
+    }
+    .footer .nav-menu {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+    .footer .nav-menu li a {
+      font-size: 1.25rem;
+    }
+    .footer .login-btn {
+      font-size: 1rem;
+      padding: 8px 16px;
+      margin-top: 10px;
+    }
+    .footer .market-logo {
+      max-height: 50px;
+    }
+
+
+    /* --------------------------------------------------------------
+       13) Дополнения: например, переопределение градиентного фона
+    -------------------------------------------------------------- */
+    .gradient-bg {
+      background-size: cover;
+      background-color: beige;
+      background-image: none;
+    }
+}

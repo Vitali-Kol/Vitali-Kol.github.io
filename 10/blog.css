@@ -1,0 +1,214 @@
+/* =============================
+   1) БАЗОВЫЕ СТИЛИ (DESKTOP)
+   ============================= */
+
+/* Сбросы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Тело документа */
+  body {
+    font-family: 'Sora', Arial, sans-serif;
+    background: #fff;
+    color: #333;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Контейнер */
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* ===== HEADER ===== */
+  .header {
+    background-color: #FECF42;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+  }
+  
+  /* Navbar (шапка) */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  /* Логотип */
+  .logo img {
+    max-height: 125px;
+    border-radius: 15px;
+  }
+  
+  /* Основное меню */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.25rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  .nav-menu li:nth-child(3) a {
+    opacity: 1;
+  }
+  .nav-menu li a img {
+    width: 25px;
+    height: auto;
+    margin-left: 5px;
+    vertical-align: middle;
+    opacity: 0.8;
+  }
+  .nav-menu li:nth-child(3) a img {
+    opacity: 1;
+  }
+  
+  /* Логотип маркета */
+  .market-logo {
+    max-height: 55px;
+    margin-right: -490px; /* На десктопе, если очень нужно */
+  }
+  
+  /* Кнопка Login */
+  .login-btn {
+    background-color: #D82926;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .login-btn:hover {
+    background-color: #B52A1E;
+  }
+  
+  /* ===== BLOG SECTION (DESKTOP) ===== */
+  .blog-section {
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+  }
+  .blog-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  .blog-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+    min-height: 450px;
+  }
+  .blog-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .card-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Заполняем картинку */
+  }
+  .card-content {
+    padding: 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #333;
+  }
+  .card-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  .read-more {
+    font-size: 0.95rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 175px; /* Отодвигаем ссылку вниз */
+  }
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  /* ===== FOOTER (DESKTOP) ===== */
+  .footer {
+    background-color: #FECF42;
+    border-top: 1px solid #000;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .footer .logo img {
+    max-height: 80px;
+    border-radius: 15px;
+  }
+  .footer .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .footer .nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  .footer .nav-menu li a:hover {
+    opacity: 1;
+  }
+  .footer .market-logo {
+    max-height: 45px;
+  }
+  .footer .login-btn {
+    background-color: #D82926;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .footer .login-btn:hover {
+    background-color: #B52A1E;
+  }
+  
+
+
+  

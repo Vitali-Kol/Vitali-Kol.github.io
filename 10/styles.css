@@ -1,0 +1,1301 @@
+/* Сброс базовых отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Общие стили для страницы */
+body {
+  font-family: 'Sora', Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Контейнер для ограничения ширины контента */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+/* Шапка сайта */
+.header {
+  background-color: #FECF42;
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+
+/* Навигация */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.logo img {
+  max-height: 125px;
+  border-radius: 15px;
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.25rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.nav-menu li:first-child a {
+  opacity: 1;
+}
+.nav-menu li a img {
+  width: 25px;
+  height: auto;
+  margin-left: 5px;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+.nav-menu li:first-child a img {
+  opacity: 1;
+}
+.market-logo {
+  max-height: 55px;
+  margin-right: -400px;
+}
+.login-btn {
+  background-color: #D82926;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #B52A1E;
+}
+
+/* Блок Hero (главный баннер) */
+.hero {
+  background: linear-gradient(to bottom, #FECF42, #FECE41, #FFFFFF);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Блок бургера и подложки */
+.hero-image {
+  position: relative;
+  flex: 1 1 400px;
+  max-width: 550px;
+  margin-top: 20px;
+}
+.burger-image {
+  position: relative;
+  width: 1150px;
+  right: 100px;
+  height: auto;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.red-overlay {
+  position: absolute;
+  top: -20px;
+  right: -300px;
+  max-width: 845px;
+  height: auto;
+  z-index: 0;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.hero-text {
+  flex: 1 1 650px;
+  margin-left: -225px;
+  margin-bottom: 50px;
+}
+.hero-text h1 {
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: black;
+}
+.hero-text p {
+  font-size: 27px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: black;
+}
+
+
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.view-menu-btn,
+.order-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.view-menu-btn {
+  background-color: white;
+  color: black;
+  border: none;
+}
+.order-btn {
+  background-color: #D82926;
+  color: white;
+  border: none;
+}
+.view-menu-btn:hover,
+.order-btn:hover {
+  opacity: 0.8;
+}
+
+/* Мини-изображения */
+.menu-images {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.menu-images img {
+  width: 95px;
+  height: auto;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+.menu-images img:nth-child(3) {
+  opacity: 1;
+  border: 1px solid #cc0000;
+}
+
+/* Секция с карточками бургеров */
+.burgers-section {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.burgers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.burger-card {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+}
+/* Фон карточек */
+.burger-card.black-bg {
+  background: url('black.jpg') no-repeat center center;
+  background-size: cover;
+}
+.burger-card.red-bg {
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(216,41,38,0.8));
+  background-size: cover;
+}
+.burger-card.gold-bg {
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(200,161,6,0.8));
+  background-size: cover;
+}
+.burger-card.blue-bg {
+  background: url('blue_fon.png') no-repeat center center;
+  background-size: cover;
+}
+.burger-img {
+  position: absolute;
+  bottom: 10px;
+  width: 400px;
+  height: auto;
+  right: -10px;
+  border-radius: 6px;
+  z-index: -1;
+}
+.burger-card .burger-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+.burger-desc123 {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+.order-now-btn {
+  background-color: #FF0000;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 150px;
+}
+.order-now-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Секция с популярным меню */
+.menu-section {
+  width: 100%;
+  margin: 0 auto;
+  transform: translateX(110px) translateY(-350px);
+}
+.popular-menu {
+  width: 100%;
+  height: 825px;
+  background-color: #fff;
+}
+.popular-menu-title {
+  text-align: left;
+  font-size: 36px;
+  font-weight: 700;
+  color: #D82926;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+.popular-menu-subtitle {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+  margin-left: 50px;
+}
+/* Блок главного бургера */
+.main-burger {
+  transform: translateX(50px) translateY(611px);
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 2.5px solid #333;
+  width: 250px;
+  height: 476px;
+  z-index: 1;
+}
+.burger-image123 {
+  transform: translateX(-40px) translateY(100px);
+  width: 305px;
+  border-radius: 12px;
+}
+.main-burger .burger-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+}
+.burger-products {
+  font-size: 16px;
+  color: #888;
+}
+
+/* Контейнер для продуктов */
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 300px;
+}
+.menu-item {
+  width: 21%;
+  height: 238px;
+  text-align: left;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 2.5px solid #333;
+}
+.menu-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #FFDD57;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menu-item-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.menu-item-products {
+  font-size: 15px;
+  color: #888;
+  text-align: left;
+}
+
+/* ========== Секция: Why Choose Us? ========== */
+.why-choose-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+.section-title p {
+  color: #D82926;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 75px;
+}
+.ingredients-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+.info-box {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+/* Заголовки и описание */
+.info-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+.info-box p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.info-box .price {
+  font-weight: 700;
+  color: #D82926;
+  font-size: 1rem;
+}
+/* Позиционирование карточек */
+.top-left {
+  grid-column: 1;
+  grid-row: 1;
+  margin-right: auto;
+}
+.bottom-left {
+  grid-column: 1;
+  grid-row: 2;
+  margin-right: auto;
+}
+.top-right {
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: auto;
+}
+.bottom-right {
+  grid-column: 2;
+  grid-row: 2;
+  margin-left: auto;
+}
+/* Центральное изображение бургера */
+.burger-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.burger-center img {
+  width: 475px;
+  height: auto;
+}
+/* Линии соединения */
+.info-box {
+  position: relative;
+}
+.top-left::after,
+.bottom-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -145px;
+  width: 145px;
+  height: 2px;
+  background-color: gray;
+}
+.top-right::before,
+.bottom-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -145px;
+  width: 145px;
+  height: 2px;
+  background-color: gray;
+}
+
+/* ========== Секция: Hero Delivery ========== */
+.hero-delivery {
+  position: relative;
+  padding: 40px 0;
+  background: #ffe9c6;
+  margin-top: 50px;
+}
+
+.gradient-bg {
+  background: url('gradient-bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-content.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1080px;
+}
+.hero-text123 {
+  flex: 1 1 500px;
+  margin-right: 20px;
+  max-width: 600px;
+}
+.hero-title {
+  font-size: 2rem;
+  color: #e14f4f;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+  max-width: 1000%;
+  width: 250%;
+}
+.delivery-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #ff6060;
+  font-weight: 600;
+  font-family: 'Pattaya', sans-serif;
+}
+
+.hero-text123 {
+  flex: 1 1 500px;
+  margin-left: -225px;
+  margin-bottom: 50px;
+}
+.hero-text123 h1 {
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: black;
+}
+.hero-text123 p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: black;
+}
+.hero-subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  color: #333;
+}
+.hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555;
+}
+.price-box {
+  margin-bottom: 10px;
+  display: inline-flex;
+}
+.price-box p {
+  font-size: 1.4rem;
+  color: #444;
+
+}
+.price-box .highlight {
+  color: #e14f4f;
+  font-weight: bold;
+}
+.delivery-info {
+  display: flex;
+  align-items: center;
+  display: inline-flex;
+  gap: 15px;
+  margin-left: 50px;
+}
+.delivery-info p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.left-image-link {
+  display: inline-block;
+  width: 50px;      /* ширина картинки */
+  height: 50px;     /* высота картинки */
+  background-image: url('delivery-bike.png');
+  background-size: cover; /* или contain, по вашим требованиям */
+
+  margin-right: 10px;
+}
+
+.order-num {
+  color: #e14f4f;
+  font-weight: 600;
+}
+.order-btn {
+  background-color: #e14f4f;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.order-btn:hover {
+  background-color: #c73f3f;
+}
+.hero-image {
+  position: relative;
+  flex: 1 1 400px;
+  text-align: center;
+  margin-top: 20px;
+}
+.courier-img {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+}
+.cloud1 {
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 150px;
+  opacity: 0.8;
+}
+.cloud2 {
+  position: absolute;
+  bottom: 10%;
+  top: -10%;
+  left: 30%;
+  width: 150px;
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 1.8rem;
+    display: none;
+  }
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  .courier-img {
+    width: 300px;
+  }
+}
+
+/* Секция: Popular Dishes */
+.popular-dishes {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #fff;
+  position: relative;
+}
+
+/* Подзаголовок "Food Items" */
+.food-items-label {
+  color: #D82926;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-family: 'Pattaya', sans-serif;
+}
+
+/* Заголовок секции */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.filter-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 25px;
+  margin: -20px 0 30px auto; /* добавлен отрицательный margin-top */
+  max-width: 450px;
+}
+
+/* Стили ссылок в меню фильтра */
+.filter-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.filter-menu li a:hover {
+  background-color: #D82926;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.filter-menu li a.active {
+  background-color: #D82926;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+/* Сетка карточек */
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 15px;
+  justify-items: center; /* централизует карточки по горизонтали */
+}
+
+/* Карточка блюда */
+.dish-card {
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  border-color: red;
+  position: relative; /* для абсолютного позиционирования вложенных элементов */
+  width: 475px;
+}
+
+/* Кнопка покупки (иконка) */
+.dish-card .buy-btn {
+  position: absolute;
+  bottom: 10px;  /* расположена в правом нижнем углу */
+  right: 10px;
+  width: 40px; /* задайте нужный размер */
+  height: auto;
+  cursor: pointer;
+}
+
+.dish-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.dish-image {
+  max-width: 175px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.dish-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+.dish-desc {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+.dish-price {
+  font-size: 1rem;
+  color: #D82926;
+  font-weight: 700;
+}
+
+
+
+.chef-section {
+  width: 100%;
+  padding: 50px 20px;
+  position: relative; /* Если нужно делать позиционирование внутри */
+  background-color: #fff;
+}
+
+/* Содержимое секции */
+.chef-content {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Блок заголовков по центру, можно настроить */
+.chef-titles {
+  position: absolute; 
+  top: 10px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  text-align: center;
+}
+.chef-subtitle {
+  color: red; 
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-family: 'Pattaya', sans-serif;
+}
+.chef-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Левая часть с изображениями */
+  .chef-images {
+    position: relative;
+    width: 500px; /* задайте нужную ширину контейнера */
+    margin: 0 auto; /* центрируем контейнер */
+  }
+
+  .fire-burger {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    margin-top: 115px;  /* смещаем fire-burger ниже */
+  }
+
+  .tasty-burger123 {
+    position: absolute;
+    top: 70%;      /* смещено вниз (можно настроить по желанию) */
+    left: 50%;
+    width: 70%;
+    height: auto;
+    transform: translate(25%, -50%);
+    z-index: 2;
+  }
+
+/* Правая часть с карточками */
+.chef-burgers {
+  position: relative;
+  width: 45%;
+  margin-top: 140px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.tasty-burger123::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* линия ниже изображения */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* длина линии */
+  height: 2px;
+  background-color: gray;
+}
+
+.market_logo_extra {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 80px; /* задайте нужную ширину */
+  height: auto;
+  z-index: 10; /* чтобы логотип был поверх содержимого */
+}
+
+.fire-burger::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* линия будет ниже изображения */
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 100px; /* длина линии, настройте по своему вкусу */
+  height: 2px;
+  background-color: gray;
+}
+
+/* Общий стиль карточек (уже у вас должен быть) */
+.burger-info {
+  position: relative;
+  width: 350px;
+  min-height: 150px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Позиционирование логотипов в правом нижнем углу карточек */
+.market-logo123,
+.market-logo12345 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;  /* задайте нужный размер */
+  height: auto;
+  z-index: 2;
+}
+
+
+
+.burger-info:last-child {
+  margin-bottom: 0;
+}
+
+/* Изображение в карточке */
+.small-burger-img {
+  width: 60px;
+  height: auto;
+  float: left;     /* Картинка слева */
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.burger-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+.burger-desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.burger-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #d83434;
+}
+
+/* Позиционирование (линии) для верхней и нижней карточки 
+   (пример использования псевдоэлементов, если хотите нарисовать линии) */
+.top-box::before,
+.bottom-box::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  background-color: #333;
+  top: 50%; 
+  left: -80px; 
+}
+.top-box::before {
+  /* Линия для верхней карточки */
+}
+.bottom-box::before {
+  /* при необходимости меняйте координаты для нижней карточки */
+  top: 50%; /* можно подкорректировать */
+}
+
+
+.testimonials-section {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px;
+  background: #f6f1eb url("lemon-bg.jpg") no-repeat center center; /* пример фона (замените на нужный) */
+  background-size: cover;
+}
+
+
+.testimonials-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); 
+  z-index: 1;
+}
+
+
+/* Заголовки сверху */
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative; /* чтобы они были над overlay */
+  z-index: 2; 
+}
+.testimonials-subtitle {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Pattaya', sans-serif;
+}
+.testimonials-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Контейнер для отзывов */
+.testimonials-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  z-index: 2; /* чтобы было над overlay */
+}
+
+/* Каждая карточка отзыва */
+.testimonial-card {
+  position: relative;
+  width: 500px;       /* увеличенная ширина */
+  min-height: 250px;  /* увеличенная минимальная высота */
+  margin-bottom: 30px;
+  padding: 30px;      /* увеличенные внутренние отступы */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Фон карточки (пример) */
+.testimonial-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("burger-bg123.jpg") no-repeat center center; /* замените на нужный фон */
+  background-size: cover;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Для второй карточки задаём другой фон */
+.testimonial-card.second .testimonial-bg {
+  background: url("second-burg-bg.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+/* Контент отзыва */
+.testimonial-content {
+  position: relative;
+  z-index: 2; /* выше фона */
+  color: #fff;
+  padding: 20px;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Аватарка – остаётся без изменений */
+.client-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* Контейнер для деталей: имя и звёзды, располагаем в колонку */
+.client-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Имя пользователя */
+.client-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 5px;
+}
+
+/* Блок со звёздами */
+.client-stars {
+  display: flex;
+  gap: 4px;
+}
+
+/* Стили для каждой звезды */
+.star-icon {
+  width: 18px;
+  height: auto;
+}
+
+/* Текст отзыва */
+.client-feedback {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  clear: both; /* сброс float от аватара */
+}
+
+
+
+
+
+.info-section {
+  width: 100%;
+  background: url('yellow-bg123.png') no-repeat center center;
+  background-size: 1850px;
+  padding: 150px 0;
+}
+
+/* Контейнер внутри */
+.info-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* выравниваем колонки сверху */
+  justify-content: space-between; /* распределяем колонки */
+  margin-top: 100px;
+}
+
+/********************************************************
+   Левая часть: логотип, описание, время
+********************************************************/
+.info-left {
+  flex: 1 1 200px;
+  min-width: 220px;
+}
+.info-logo {
+  width: 70px; /* Настроить размер лого */
+  margin-bottom: 15px;
+}
+.info-description {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.info-time {
+  font-weight: 600;
+  color: #000;
+}
+
+/********************************************************
+   Общие стили для колонок (Explore, Contact Info, Newsletter)
+********************************************************/
+.info-column {
+  flex: 1 1 160px;
+  min-width: 200px;
+}
+
+.column-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Список ссылок (Explore) */
+.info-list {
+  list-style: none;
+}
+.info-list li {
+  margin-bottom: 5px;
+}
+.info-list li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+.info-list li a:hover {
+  color: #000;
+}
+
+/* Колонка Contact Info */
+.contact-column p {
+  margin-bottom: 5px;
+}
+
+.info-footer-wrapper {
+  display: flex;
+  justify-content: space-between; /* Распределяем элементы по краям */
+  align-items: center; /* Выравниваем по вертикали */
+  width: 70%;
+  padding: 20px 0;
+  margin-top: 75px; /* Добавляем отступ сверху */
+  margin-left: 250px;
+}
+
+.info-footer {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* промежуток между иконками */
+}
+
+.social-icon {
+  width: 65px; /* или нужный размер */
+  height: auto;
+}
+
+.black-circles {
+  width: 30px;
+  height: auto; /* или фиксированная высота, если требуется */
+}
+
+/* Контейнер для иконки и текста */
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;  /* отступ между кружком и текстом */
+  margin-bottom: 10px;
+}
+
+/* Колонка Newsletter */
+.newsletter-column p {
+  margin-bottom: 10px;
+}
+.newsletter-email {
+  display: flex;
+  align-items: center;
+  gap: 100px;       /* расстояние между текстом и стрелкой */
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.arrow-icon {
+  width: 20px;    /* задайте нужный размер стрелки */
+  height: auto;
+  transform: rotate(-90deg);
+}
+.privacy-check {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+
+.footer {
+  background-color: #FECF42; /* такой же цвет, как у .header */
+  border-top: 1px solid #000;
+  padding: 10px 0; /* делаем отступ похожим на хедер, без лишних «воздухов» */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px; /* небольшой горизонтальный отступ, как у .header */
+}
+.footer .logo img {
+  max-height: 80px;  /* или аналогичное значение, как в .header */
+  border-radius: 15px;
+}
+.footer .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.footer .nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.2rem; /* можно чуть меньше, чем в шапке, или такое же */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.footer .nav-menu li a:hover {
+  opacity: 1;
+}
+.footer .market-logo {
+  max-height: 45px;
+  /* при необходимости уберите margin, если он есть */
+}
+.footer .login-btn {
+  background-color: #D82926;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem; /* если нужно сделать кнопку чуть меньше, чем в шапке */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.footer .login-btn:hover {
+  background-color: #B52A1E;
+}
+

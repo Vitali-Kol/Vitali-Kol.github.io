@@ -1,0 +1,581 @@
+/* ===== Базовые мобильные стили (Mobile First) ===== */
+/* Общие стили */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  /* Шапка */
+  .header {
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo img {
+    max-height: 80px;
+  }
+  
+  .market-logo {
+    max-height: 40px;
+    margin: 10px 0;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .nav-menu li a {
+    font-size: 1.25rem;
+  }
+  
+  .login-btn {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Hero секция */
+  .hero {
+    min-height: auto;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+  
+  .burger-image {
+    width: 100%;
+    position: relative;
+    right: 0;
+  }
+  
+  .red-overlay {
+    display: none;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .view-menu-btn,
+  .order-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .menu-images {
+    justify-content: center;
+  }
+  
+  .menu-images img {
+    width: 70px;
+  }
+
+  /* ===== Hero Section - Mobile (до 767px) ===== */
+.hero {
+  min-height: auto;
+  padding: 20px 0 40px;
+  background: linear-gradient(to bottom, #FECF42, #FECE41, #FFFFFF);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column-reverse; /* Изображение сверху, текст снизу */
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-text {
+  width: 100%;
+  padding: 0 10px;
+  margin-left: 4px;
+  margin-top: 5px;
+  margin-bottom: -125px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column; /* Кнопки в столбик на мобильных */
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.view-menu-btn,
+.order-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  width: 100%; /* Полная ширина на мобильных */
+}
+
+.view-menu-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid #000;
+}
+
+.order-btn {
+  background-color: #D82926;
+  color: white;
+  border: none;
+}
+
+.menu-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.menu-images img {
+  width: 70px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.menu-images img:nth-child(3) {
+  opacity: 1;
+  border: 2px solid #D82926;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.burger-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.red-overlay {
+  display: none; /* Скрываем на мобильных */
+}
+
+/* Адаптация для планшетов (768px+) */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 500px;
+    padding: 40px 0;
+  }
+  
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero-text {
+    width: 50%;
+    text-align: left;
+    padding-right: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .view-menu-btn,
+  .order-btn {
+    width: auto;
+  }
+  
+  .hero-image {
+    width: 45%;
+    max-width: 500px;
+  }
+  
+  .burger-image {
+    width: 120%;
+    right: -20%;
+  }
+  
+  .red-overlay {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    right: -30%;
+    top: 10%;
+    opacity: 0.6;
+  }
+}
+  
+  /* Карточки бургеров */
+  .burgers-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .burger-card {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .burger-img {
+    width: 60%;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 15px auto;
+  }
+  
+  /* Популярное меню */
+  .menu-section {
+    margin-top: 30px;
+    transform: none !important;
+  }
+  
+  .popular-menu {
+    height: auto;
+  }
+  
+  .popular-menu-title,
+  .popular-menu-subtitle {
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .main-burger {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    transform: none !important;
+    display: none;
+  }
+
+  .top-left::after,
+.bottom-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -145px;
+  width: 145px;
+  height: 2px;
+  background-color: gray;
+  display: none;
+}
+.top-right::before,
+.bottom-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -145px;
+  width: 145px;
+  height: 2px;
+  background-color: gray;
+  display: none;
+}
+  
+  .burger-image123 {
+    display: none;
+  }
+  
+  .menu-items {
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .menu-item {
+    width: 100%;
+    max-width: 300px;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  /* Почему мы */
+  .ingredients-container {
+    padding: 20px;
+  }
+  
+  .burger-center img {
+    display: none;
+  }
+  
+  .info-box {
+    margin: 10px 0;
+  }
+  
+  /* Доставка */
+  .hero-delivery {
+    padding: 30px 0;
+    display: none;
+  }
+  
+  .hero-text123 {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .hero-text123 h1 {
+    font-size: 2rem;
+  }
+  
+  .delivery-info {
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  /* Популярные блюда */
+  .dishes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dish-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .filter-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+  
+  /* Шеф-повар */
+  .chef-content {
+    flex-direction: column;
+    display: none;
+  }
+  
+  .chef-titles {
+    position: relative;
+    transform: none;
+    margin-bottom: 20px;
+  }
+  
+  .chef-images {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .chef-burgers {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .burger-info {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+  
+  /* Отзывы */
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonial-card {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  /* Футер */
+/* Мобильные стили (базовые) */
+.info-section {
+    background: #FECF42; /* Желтый цвет как в шапке */
+    padding: 50px 0;
+  }
+  
+  .info-container {
+    flex-direction: column;
+    background: transparent; /* Прозрачный, чтобы был виден родительский фон */
+  }
+  
+  .info-column {
+    margin-bottom: 30px;
+  }
+  
+  .info-footer-wrapper {
+    flex-direction: column;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+  
+  /* ===== Планшеты (768px и выше) ===== */
+  @media (min-width: 768px) {
+    body {
+      font-size: 17px;
+    }
+    
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .nav-menu {
+      flex-direction: row;
+    }
+    
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+    
+    .burgers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .menu-items {
+      margin-left: 200px;
+    }
+    
+    .menu-item {
+      width: 45%;
+    }
+    
+    .dishes-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .info-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    
+    .info-column {
+      flex: 1 1 45%;
+    }
+  }
+  
+  /* ===== Десктоп (1024px и выше) ===== */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .hero-text h1 {
+      font-size: 4rem;
+    }
+    
+    .burgers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .dishes-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .chef-content {
+      flex-direction: row;
+    }
+    
+    .testimonials-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .info-column {
+      flex: 1 1 22%;
+    }
+    
+    .info-footer-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  /* ===== Большие экраны (1200px и выше) ===== */
+  @media (min-width: 1200px) {
+    .hero-content {
+      flex-direction: row;
+    }
+    
+    .hero-text {
+      text-align: left;
+    }
+    
+    .burger-image {
+      width: 115%;
+      right: -100px;
+    }
+    
+    .red-overlay {
+      display: block;
+      right: -200px;
+    }
+
+
+  }

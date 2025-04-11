@@ -1,0 +1,104 @@
+/* =============================
+   MOBILE STYLES (max-width: 768px)
+   ============================= */
+   @media (max-width: 768px) {
+    /* Общие стили для контейнера, отступы */
+    .container {
+      width: 100%;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+  
+    /* ===== HEADER ===== */
+    .header {
+      padding: 5px 0;
+    }
+  
+  
+    /* Логотип */
+    .logo img {
+      max-height: 80px; /* уменьшаем логотип */
+      margin-bottom: 10px;
+    }
+
+  
+    /* Главное меню */
+    .nav-menu {
+      flex-direction: row;
+      gap: 10px;
+    }
+    .nav-menu li a {
+      font-size: 1.3rem;  /* немного уменьшим шрифт */
+    }
+  
+    /* Логотип маркета */
+    .market-logo {
+      max-height: 40px;
+      margin-right: 0; /* убираем отрицательный отступ */
+      margin-bottom: 10px;
+    }
+  
+
+  
+    /* ===== BLOG SECTION ===== */
+    .blog-section {
+      padding: 20px 0;
+    }
+  
+    /* Сетка карточек: делаем в 1 колонку */
+    .blog-cards {
+      display: grid;
+      grid-template-columns: 1fr; /* одна колонка */
+      gap: 20px;
+    }
+  
+    /* Изображения в карточках */
+    .card-img {
+      height: auto;  /* даём картинкам авто-высоту */
+    }
+  
+    .card-content {
+      padding: 10px;
+    }
+    .card-title {
+      font-size: 1rem; /* чуть меньше */
+    }
+    .card-date {
+      font-size: 0.85rem;
+    }
+    .read-more {
+      margin-top: auto; /* чтобы ссылка оставалась внизу, но не было больших пустот */
+      font-size: 0.9rem;
+    }
+  
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 10px 0;
+    }
+    .footer .navbar {
+      flex-direction: row;
+      gap: 10px;
+    }
+    .footer .logo img {
+      max-height: 60px;
+      margin-bottom: 10px;
+    }
+    .footer .nav-menu {
+      flex-direction: row;
+      gap: 10px;
+    }
+    .footer .nav-menu li a {
+      font-size: 1.25rem;
+    }
+    .footer .market-logo {
+      max-height: 35px;
+      margin-bottom: 10px;
+    }
+    .footer .login-btn {
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+  
