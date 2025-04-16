@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/styles-mobile.css" />
+  <title>IndieCrate - Main</title>
+</head>
+<body>
+  <header id="site-header">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="img/icon/icon.png" alt="Icon" class="logo-icon" />
+        <h1>IndieCrate</h1>
+      </div>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="list.html">All Games</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-btn">
+              <img src="img/icon/market.png" alt="Cart" class="cart-icon" />
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Welcome to the World of Indie Games</h2>
+        <p>Discover unique and creative projects from independent developers.</p>
+        <a href="#" class="btn">View Games</a>
+      </div>
+    </section>
+
+    <section class="products">
+      <h2>Recommended Releases</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="img/picture/hollowknight.jpg" alt="Hollow Knight" class="product-image" />
+          <h3 class="product-title">Hollow Knight</h3>
+          <p class="developer">Developer: Team Cherry</p>
+          <p class="release-date">Release Date: 02/24/2017</p>
+          <p class="price">Price: $14.99</p>
+          <p class="short-description">
+            Explore the mysterious world of Hallownest in this immersive Metroidvania adventure.
+          </p>
+          <div class="product-buttons">
+            <button class="add-to-cart"
+                    data-title="Hollow Knight"
+                    data-developer="Team Cherry"
+                    data-release="02/24/2017"
+                    data-price="$14.99"
+                    data-description="Explore the mysterious world of Hallownest in this immersive Metroidvania adventure.">
+              Add to Cart
+            </button>
+            <button class="details-btn" onclick="location.href='#'">Details</button>
+            <button class="favorite" title="Add to Favorites"></button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="img/picture/celeste.jpg" alt="Celeste" class="product-image" />
+          <h3 class="product-title">Celeste</h3>
+          <p class="developer">Developer: Matt Makes Games</p>
+          <p class="release-date">Release Date: 01/25/2018</p>
+          <p class="price">Price: $19.99</p>
+          <p class="short-description">
+            Climb the mountain and overcome your inner demons in this challenging platformer.
+          </p>
+          <div class="product-buttons">
+            <button class="add-to-cart"
+                    data-title="Celeste"
+                    data-developer="Matt Makes Games"
+                    data-release="01/25/2018"
+                    data-price="$19.99"
+                    data-description="Climb the mountain and overcome your inner demons in this challenging platformer.">
+              Add to Cart
+            </button>
+            <button class="details-btn" onclick="location.href='#'">Details</button>
+            <button class="favorite" title="Add to Favorites"></button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="img/picture/undertale.jpg" alt="Undertale" class="product-image" />
+          <h3 class="product-title">Undertale</h3>
+          <p class="developer">Developer: Toby Fox</p>
+          <p class="release-date">Release Date: 09/15/2015</p>
+          <p class="price">Price: $9.99</p>
+          <p class="short-description">
+            Embark on a unique RPG journey where your choices affect the fate of all.
+          </p>
+          <div class="product-buttons">
+            <button class="add-to-cart"
+                    data-title="Undertale"
+                    data-developer="Toby Fox"
+                    data-release="09/15/2015"
+                    data-price="$9.99"
+                    data-description="Embark on a unique RPG journey where your choices affect the fate of all.">
+              Add to Cart
+            </button>
+            <button class="details-btn" onclick="location.href='#'">Details</button>
+            <button class="favorite" title="Add to Favorites"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="all-games">
+        <a href="list.html" class="btn">View All Games</a>
+      </div>
+    </section>
+
+
+
+
+    <section id="about">
+      <div class="slide-wrapper">
+        <div class="slide-content">
+          <div class="slide">
+            <!-- Фон секции: slide-16-9-3.png -->
+            <div class="about-container">
+              <!-- Заголовок "ABOUT US" и подзаголовок -->
+              <div class="about-header">
+                <h2>ABOUT US</h2>
+                <p class="subtitle">History, ideas, inspiration</p>
+              </div>
+    
+              <!-- Основное описание блока About -->
+              <p class="about-text">
+                Our site is not just an information resource, but a real creative platform for everyone who loves and appreciates indie games. Here you will find fresh reviews, interviews with developers and much more, which helps not only to stay up to date, but also to find inspiration for your own projects.
+              </p>
+    
+              <!-- Подзаголовок "The history of our journey" -->
+              <h3 class="about-subtitle">📜 The history of our journey</h3>
+    
+              <!-- Timeline (горизонтальную линию и точки убираем, делаем список) -->
+              <div class="timeline">
+                <div class="timeline-item">
+                  <strong>2000 — Idea in the Air</strong>
+                  <p>A love for indie games and a dream to create a space for like-minded people was born.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>2005 — First Steps</strong>
+                  <p>The first blog appeared with reviews of little-known but cool projects.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>2010 — Recognition in the Community</strong>
+                  <p>We started talking about us in the indie community, interviews and collaborations appeared.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>2015 — New Level</strong>
+                  <p>We launched a full-fledged site, added a forum and a database of indie games.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>2020 — Time for Growth</strong>
+                  <p>New formats: podcasts, videos, contests. Thousands of new users.</p>
+                </div>
+                <div class="timeline-item">
+                  <strong>2025 — Indie Eyes of the Future</strong>
+                  <p>The site became a media space uniting indie fans and developers.</p>
+                </div>
+              </div>
+            </div><!-- about-container -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS SECTION -->
+    <section id="contacts">
+      <div class="slide">
+        <!-- Фон секции: slide-16-9-2.png -->
+        <div class="contacts-container">
+          <h2 class="contacts-title">CONTACTS</h2>
+    
+          <!-- Блок с иконками/текстом, упрощённо в стеке -->
+          <div class="contact-row">
+            <img src="img/icon/email-1.png" alt="Email icon" />
+            <div class="contact-text">
+              <strong>Email:</strong> Indiecrate@gmail.com (for advertising) <br />
+              Indiecratesupport@gmail.com (for support and questions)
+            </div>
+          </div>
+    
+          <div class="contact-row">
+            <img src="img/icon/location-pin-1.png" alt="Location pin" />
+            <div class="contact-text">
+              <strong>Our address:</strong> 3123 O'Conner Overpass South Tatumville, NJ 31341
+            </div>
+          </div>
+    
+          <div class="contact-row">
+            <img src="img/icon/phone-call-1.png" alt="Phone call" />
+            <div class="contact-text">
+              <strong>Phones:</strong><br />
+              +1 572 332 3989 <br />
+              +1 906 348 4183
+            </div>
+          </div>
+    
+          <div class="contact-row">
+            <img src="img/icon/time-left-1.png" alt="Time left" />
+            <div class="contact-text">
+              <strong>Office hours</strong><br />
+              Monday - Friday: 11:00 - 20:00 <br />
+              Saturday: 12:00 - 16:00 <br />
+              Sunday: Closed
+            </div>
+          </div>
+        </div><!-- contacts-container -->
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews">
+      <div class="slide">
+        <!-- Фон секции: slide-16-9-1.png -->
+        <div class="reviews-container">
+          <h2 class="reviews-title">GENERAL REVIEWS</h2>
+    
+          <div class="review-card">
+            <p class="review-quote">I love the design - atmospheric and indie!</p>
+            <div class="review-author">
+              <img class="avatar" src="img/icon/user-3.png" alt="user" />
+              <span class="author-name">Alex Davids</span>
+            </div>
+          </div>
+    
+          <div class="review-card">
+            <p class="review-quote">Conveniently find games by genre. Everything is simple and clear</p>
+            <div class="review-author">
+              <img class="avatar" src="img/icon/user-3.png" alt="user" />
+              <span class="author-name">Jake Adamson</span>
+            </div>
+          </div>
+    
+          <div class="review-card">
+            <p class="review-quote">Thank you for supporting independent developers!</p>
+            <div class="review-author">
+              <img class="avatar" src="img/icon/user-3.png" alt="user" />
+              <span class="author-name">John Prossy</span>
+            </div>
+          </div>
+        </div><!-- reviews-container -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 IndieCrate. All rights reserved.
+  </footer>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

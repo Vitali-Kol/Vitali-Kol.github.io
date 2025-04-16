@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IndieCrate - Cart</title>
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header id="site-header">
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="img/icon/icon.png" alt="Icon" class="logo-icon" />
+          <h1>IndieCrate</h1>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="list.html">All Games</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="cart.html" class="cart-btn">
+                <img src="img/icon/market.png" alt="Cart" class="cart-icon" />
+                <span class="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="total-price"></div>
+        <div class="cart-actions">
+          <a href="checkout.html" class="btn">Proceed to Checkout</a>
+          <a href="index.html" class="btn">Continue Shopping</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      &copy; 2025 IndieCrate. All rights reserved.
+    </footer>
+  </div>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

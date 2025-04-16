@@ -1,0 +1,590 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2E2E2E;
+  background-color: #F7F2EC;
+}
+
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: #C3825B;
+  color: #F7F2EC;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(247, 242, 236, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 40px;
+  height: 70px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 29px;
+  color: #C3825B;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu ul li {
+  margin-left: 20px;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #2E2E2E;
+  transition: color 300ms;
+  font-size: 16px;
+}
+
+.nav-menu ul li a:hover {
+  color: #425C34;
+}
+
+.cart-btn {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 29px;
+  cursor: pointer;
+  color: #2E2E2E;
+}
+
+main {
+  margin-top: 80px;
+}
+
+.hero {
+  position: relative;
+  min-height: 660px;
+  background: url("../img/background.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background-color: rgba(247, 242, 236, 0.75);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #C3825B;
+}
+
+.hero-content p {
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #C3825B;
+  color: #F7F2EC;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 300ms, color 300ms;
+  width: 300px;
+}
+
+.btn:hover {
+  background-color: #F4D292;
+  color: #2E2E2E;
+}
+
+.products {
+  background-color: #F7F2EC;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.products h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #C3825B;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 15px;
+  text-align: left;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-title {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #C3825B;
+}
+
+.developer,
+.release-date,
+.price {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.release-date {
+  color: #555;
+}
+
+.short-description {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.product-buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-to-cart {
+  padding: 10px 15px;
+  border: none;
+  background-color: #C3825B;
+  color: #F7F2EC;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 300ms, color 300ms;
+}
+
+.add-to-cart:hover {
+  background-color: #F4D292;
+  color: #2E2E2E;
+}
+
+.details-btn {
+  padding: 10px 15px;
+  background-color: #795C47;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.details-btn:hover {
+  background-color: #C3825B;
+  color: #F7F2EC;
+}
+
+.favorite {
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 600ms ease;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: 29px;
+  border: none;
+  background: none;
+}
+
+.favorite:focus {
+  outline: none;
+}
+
+.favorite::before {
+  content: "\2665";
+  display: block;
+  width: 29px;
+  height: 29px;
+  font-size: 29px;
+  line-height: 29px;
+  text-align: center;
+  transition: color 600ms ease, transform 600ms ease;
+  color: #aaa;
+}
+
+.favorite:hover::before {
+  color: #e60000;
+  transform: scale(1.2);
+}
+
+.favorite:hover {
+  transform: scale(1.2);
+}
+
+.all-games {
+  margin-top: 40px;
+}
+
+.all-games .btn {
+  padding: 15px 40px;
+  font-size: 18px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #795C47;
+  color: #F7F2EC;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+
+
+
+
+
+.slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Каждый контейнер (about-container, contacts-container, reviews-container)
+   получает фон + padding */
+.about-container,
+.contacts-container,
+.reviews-container {
+  width: 100%;
+  max-width: 600px; /* чтобы текст не растягивался на всю ширину на больших экранах */
+  margin: 0 auto;   /* центрируем по горизонтали */
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+/* Пропишем конкретные фоны по ID, если хотим их зашивать прямо в CSS */
+#about .about-container {
+  background-image: url("/img/slide-16-9-3.png");
+  max-width: 100%;
+}
+
+#contacts .contacts-container {
+  background-image: url("/img/slide-16-9-2.png");
+  max-width: 100%;
+}
+
+#reviews .reviews-container {
+  background-image: url("/img/slide-16-9-1.png");
+  max-width: 100%;
+}
+
+/* -------------------------------------------------- */
+/*                 ABOUT US стили                     */
+/* -------------------------------------------------- */
+.about-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about-header h2 {
+  font-size: 2rem; /* Пример */
+  margin: 0;
+}
+
+.about-header .subtitle {
+  font-size: 1rem;
+  margin: 5px 0 0 0;
+  color: #555;
+}
+
+.about-text {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+  text-align: center;
+}
+
+/* Подзаголовок для "The history of our journey" */
+.about-subtitle {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Таймлайн (вертикальный список) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.45); /* чуть светлая подложка */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.timeline-item strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+/* -------------------------------------------------- */
+/*                 CONTACTS стили                     */
+/* -------------------------------------------------- */
+.contacts-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+}
+
+/* Контейнер для одной строки контактов */
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-row img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+
+.contact-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+/* -------------------------------------------------- */
+/*                 REVIEWS стили                      */
+/* -------------------------------------------------- */
+.reviews-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+}
+
+.review-card {
+  background-color: #795c47;
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.review-quote {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-author .avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 769px) {
+  /* На больших экранах max-width можно увеличить,
+     шрифты тоже сделать чуть крупнее. */
+  .about-container,
+  .contacts-container,
+  .reviews-container {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .about-header h2,
+  .contacts-title,
+  .reviews-title {
+    font-size: 2.5rem;
+  }
+
+  .timeline-item {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    padding: 10px 20px;
+    box-shadow: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(247, 242, 236, 0.9);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  header.open .nav-menu {
+    display: block;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  .hero {
+    min-height: 300px;
+    background: none;
+    background-color: #F7F2EC;
+  }
+
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+
+
