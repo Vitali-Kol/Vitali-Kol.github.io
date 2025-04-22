@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IndieCrate - Contacts</title>
+  <link rel="stylesheet" href="css/contacts.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo-container">
+        <img src="img/icon/icon.png" alt="Icon" class="logo-icon" />
+        <h1>IndieCrate</h1>
+      </a>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#contacts">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-btn">
+              <img src="img/icon/market.png" alt="Cart" class="cart-icon" />
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- CONTACTS SECTION -->
+    <section id="contacts">
+      <div class="slide">
+        <div class="contacts-container">
+          <h2 class="contacts-title">CONTACTS</h2>
+
+          <div class="contact-row">
+            <img src="img/icon/email-1.png" alt="Email icon" />
+            <div class="contact-text">
+              <strong>Email:</strong><br>
+              Indiecrate@gmail.com (for advertising)<br>
+              Indiecratesupport@gmail.com (for support and questions)
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <img src="img/icon/location-pin-1.png" alt="Location pin" />
+            <div class="contact-text">
+              <strong>Our address:</strong><br>
+              3123 O'Conner Overpass, South Tatumville, NJ 31341
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <img src="img/icon/phone-call-1.png" alt="Phone call" />
+            <div class="contact-text">
+              <strong>Phones:</strong><br>
+              +1 572 332 3989<br>
+              +1 906 348 4183
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <img src="img/icon/time-left-1.png" alt="Time left" />
+            <div class="contact-text">
+              <strong>Office hours:</strong><br>
+              Monday – Friday: 11:00 – 20:00<br>
+              Saturday: 12:00 – 16:00<br>
+              Sunday: Closed
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 IndieCrate. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

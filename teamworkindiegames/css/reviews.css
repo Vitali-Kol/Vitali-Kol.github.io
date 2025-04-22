@@ -1,0 +1,109 @@
+/* ===== IndieCrate – Reviews page (header, reviews, footer) ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2E2E2E;
+  background: #F7F2EC;
+}
+
+/* ---------- header ---------- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(247, 242, 236, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 40px;
+    height: 70px;
+  }
+
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+
+.logo-container {
+  display: flex; align-items: center;
+  text-decoration: none; color: inherit; cursor: pointer;
+}
+.logo-icon { width: 40px; height: 40px; margin-right: 10px; }
+header h1 { font-size: 29px; color: #C3825B; }
+
+.nav-menu ul { list-style: none; display: flex; align-items: center; }
+.nav-menu ul li { margin-left: 20px; }
+.nav-menu ul li a {
+  font-size: 16px; text-decoration: none; color: #2E2E2E;
+  transition: color .3s;
+}
+.nav-menu ul li a:hover { color: #425C34; }
+
+.cart-btn { position: relative; display: inline-block; }
+.cart-icon { width: 24px; height: 24px; vertical-align: middle; }
+.cart-count {
+  position: absolute; top: -5px; right: -10px;
+  background: red; color: #fff; font-weight: bold;
+  border-radius: 50%; padding: 2px 6px; font-size: 12px;
+}
+.menu-toggle {
+  display: none; background: none; border: none;
+  font-size: 29px; cursor: pointer; color: #2E2E2E;
+}
+
+/* резерв под фикс‑хедер */
+main { margin-top: 80px; }
+
+/* ---------- reviews ---------- */
+.slide { width: 100%; display: flex; justify-content: center; }
+
+.reviews-container {
+  width: 100%; margin: 0 auto 25px;
+  padding: 20px;
+  background: url('/img/slide-16-9-1.png') center/cover;
+}
+.reviews-title {
+  text-align: center; margin-bottom: 20px;
+  font-size: 2rem; color: #C3825B;
+}
+
+.review-card {
+  background: #795C47; color: #fff;
+  border-radius: 10px; padding: 20px; margin-bottom: 20px;
+}
+.review-quote { font-size: 1.5rem; margin-bottom: 15px; text-align: center; }
+.review-author { display: flex; flex-direction: column; align-items: center; }
+.review-author .avatar {
+  width: 60px; height: 60px; margin-bottom: 5px;
+  border-radius: 50%; object-fit: cover;
+}
+.author-name { font-size: 1rem; font-weight: 600; }
+
+/* ---------- footer ---------- */
+.footer {
+  text-align: center; padding: 20px;
+  background: #795C47; color: #F7F2EC;
+  font-size: 14px; margin-top: 40px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 768px) {
+  header { position: relative; padding: 10px 20px; height: auto; box-shadow: none; }
+  .menu-toggle { display: block; margin-left: auto; }
+
+  .nav-menu {
+    display: none; position: absolute; left: 0; top: 70px; width: 100%;
+    background: rgba(247, 242, 236, .9); padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); z-index: 1000;
+  }
+  header.open .nav-menu { display: block; }
+
+  .nav-menu ul { flex-direction: column; align-items: center; margin-left: 0; }
+  .nav-menu ul li { margin: 10px 0; }
+
+  .header-content { flex-wrap: wrap; }
+  main { margin-top: 0; }
+}
+
+@media (min-width: 769px) {
+  .reviews-container { max-width: 100%; }
+  .reviews-title { font-size: 2.5rem; }
+}

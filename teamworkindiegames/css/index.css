@@ -49,6 +49,9 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
+  text-decoration: none; /* убираем подчёркивание у ссылки */
+  cursor: pointer;
+  color: inherit;       /* чтобы текст наследовал цвет родителя */
 }
 
 .logo-icon {
@@ -345,6 +348,7 @@ main {
   background-position: center;
   background-size: cover;
   padding: 20px;
+  margin-bottom: 25px
 }
 
 /* Пропишем конкретные фоны по ID, если хотим их зашивать прямо в CSS */
@@ -408,6 +412,7 @@ main {
   background: rgba(255, 255, 255, 0.45); /* чуть светлая подложка */
   padding: 10px;
   border-radius: 8px;
+  text-align: center;
 }
 
 .timeline-item strong {

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IndieCrate – Reviews</title>
+  <link rel="stylesheet" href="css/reviews.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo-container">
+        <img src="img/icon/icon.png" alt="Icon" class="logo-icon" />
+        <h1>IndieCrate</h1>
+      </a>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-btn">
+              <img src="img/icon/market.png" alt="Cart" class="cart-icon" />
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Reviews Section -->
+    <section id="reviews">
+      <div class="slide">
+        <div class="reviews-container">
+          <h2 class="reviews-title">GENERAL REVIEWS</h2>
+
+          <div class="review-card">
+            <p class="review-quote">I love the design – atmospheric and indie!</p>
+            <div class="review-author">
+              <img class="avatar" src="img/icon/user-3.png" alt="user" />
+              <span class="author-name">Alex Davids</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <p class="review-quote">Conveniently find games by genre. Everything is simple and clear.</p>
+            <div class="review-author">
+              <img class="avatar" src="img/icon/user-3.png" alt="user" />
+              <span class="author-name">Jake Adamson</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <p class="review-quote">Thank you for supporting independent developers!</p>
+            <div class="review-author">
+              <img class="avatar" src="img/icon/user-3.png" alt="user" />
+              <span class="author-name">John Prossy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 IndieCrate. All rights reserved.
+  </footer>
+
+  <!-- Notification (if used) -->
+  <div id="notification" class="notification"></div>
+
+  <!-- Scripts -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+    <script src="js/index.js"></script>
+</body>
+</html>
