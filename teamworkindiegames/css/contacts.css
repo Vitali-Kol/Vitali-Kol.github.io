@@ -1,210 +1,208 @@
-/* Global Reset */
+/* ---------- Reset & базовые ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #2E2E2E;
-    background-color: #F7F2EC;
-  }
-  
-  /* ===== Header ===== */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2E2E2E;
+  background-color: #F7F2EC;
+}
+
+/* ---------- Header ---------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(247, 242, 236, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 40px;
+  height: 70px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #C3825B;
+}
+
+/* ---------- Навигация + корзина ---------- */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu ul li {
+  margin-left: 20px;
+}
+
+.nav-menu ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #2E2E2E;
+  transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  color: #425C34;
+}
+
+.nav-menu.active {
+  display: block;
+}
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #2E2E2E;
+  cursor: pointer;
+}
+
+/* ---------- Основной контент ---------- */
+main {
+  margin-top: 80px;
+}
+
+/* ---------- Contacts ---------- */
+.slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-container {
+  width: 100%;
+  height: 750px;
+  margin: 0 auto 25px;
+  padding: 20px;
+  background: url('/img/slide-16-9-2.png') center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contacts-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  color: #2E2E2E;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-row img {
+  width: 60px;
+  height: 60px;
+}
+
+.contact-text {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #795C47;
+  color: #F7F2EC;
+  font-size: 14px;
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 768px) {
   header {
-    position: fixed;
-    top: 0;
+    padding: 10px 20px;
+    box-shadow: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
     left: 0;
     width: 100%;
     background-color: rgba(247, 242, 236, 0.9);
+    padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    padding: 10px 40px;
-    height: 70px;
   }
-  
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-  }
-  
-  .logo-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  header h1 {
-    font-size: 29px;
-    color: #C3825B;
-  }
-  
-  .nav-menu ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-menu ul li {
-    margin-left: 20px;
-  }
-  
-  .nav-menu ul li a {
-    text-decoration: none;
-    color: #2E2E2E;
-    transition: color 300ms;
-    font-size: 16px;
-  }
-  
-  .nav-menu ul li a:hover {
-    color: #425C34;
-  }
-  
-  .cart-btn {
-    position: relative;
-  }
-  
-  .cart-icon {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-  }
-  
-  .cart-count {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    font-weight: bold;
-  }
-  
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 29px;
-    cursor: pointer;
-    color: #2E2E2E;
-  }
-  
-  /* отступ для main-контента под фиксированный хедер */
-  main {
-    margin-top: 80px;
-  }
-  
-  /* ===== Header — адаптив ===== */
-  @media (max-width: 768px) {
-    header {
-      padding: 10px 20px;
-      box-shadow: none;
-    }
-  
-    .menu-toggle {
-      display: block;
-      margin-left: auto;
-    }
-  
-    .nav-menu {
-      display: none;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background-color: rgba(247, 242, 236, 0.9);
-      padding: 20px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-  
-    /* показываем меню, когда в JS добавлен класс active */
-    .nav-menu.active {
-      display: block;
-    }
-  
-    .nav-menu ul {
-      flex-direction: column;
-      align-items: center;
-      margin-left: 0;
-    }
-  
-    .nav-menu ul li {
-      margin: 10px 0;
-    }
-  
-    .header-content {
-      flex-wrap: wrap;
-    }
-  }
-  
-  /* ===== Contacts ===== */
-  .slide {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .contacts-container {
-    width: 100%;
-    margin: 0 auto 25px;
-    padding: 20px;
-    background-position: center;
-    background-size: cover;
-    background-image: url("/img/slide-16-9-2.png");
-    height: 750px;
 
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
   }
-  
-  .contacts-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    margin-left: 50px;
+
+  .nav-menu ul li {
+    margin: 10px 0;
   }
-  
-  .contact-row {
-    display: flex;
-    flex-direction: row;   /* картинка над текстом */
-    align-items: center;      /* по центру */
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+
+  .header-content {
+    flex-wrap: wrap;
   }
-  
-  /* Для чуть более узких иконок */
-  .contact-row img {
-    width: 60px;
-    height: 60px;
-  }
-  
-  /* Текст по центру */
-  .contact-text {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    text-align: center;
-  }
-  
-  /* ===== Footer ===== */
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #795C47;
-    color: #F7F2EC;
-    font-size: 14px;
-    margin-top: 40px;
-  }
-  
+}
